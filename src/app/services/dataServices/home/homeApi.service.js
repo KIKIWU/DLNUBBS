@@ -10,20 +10,20 @@
     function homeApiService($resource){
 
 //        var preUrl = '/msc/mt/settle_config/travel/:action';
-//        var baseUrl = '/msc/mt/:tra/:path';
+       // var baseUrl = '/msc/mt/:tra/:path';
         return $resource('', {}, {
             /**
             * 登录  POST
             */
             login: {
-                url: 'test/login',
+                url: ' http://www.dlnubbs.com/web/Auth/login',
                 method: 'POST',
             },
             /**
             * 注册  POST
             */
             register: {
-                url: 'test/register',
+                url: 'http://www.dlnubbs.com/web/Auth/register',
                 method: 'POST',
             }
         });

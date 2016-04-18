@@ -25,10 +25,11 @@
         }
         function cheacklogin() {
             var copy = angular.copy(vm.user);
-            console.log(copy);
+            copy.requestTime = new Date().getTime();
             homeApiService.login(copy, function(result){
 
-                if(result.code === 0){
+                if(result.code === 200){
+                    console.log("登录成功");
                     
                 }
             });
@@ -36,7 +37,9 @@
         function _initialization() {
             var user = {
                 mail: '',
-                password: ''
+                password: '',
+                requestTime: '',
+                appName:'7scPLxvz1pgWzNnq2sTFNnd8c1EPsix2Z7JbdFjodvFXRzpxz5KiVAmsGryP9gwHxOLT4BYl8sqbUrlhgUld4w=='
             };
             vm.uesr = user;
         }
