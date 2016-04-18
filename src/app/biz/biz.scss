@@ -1,0 +1,26 @@
+.biz-list {
+    position: relative;
+    left: -31px;
+    margin-bottom: 15px;
+    text-align: center;
+    a {
+        font-size: 12px;
+        width: 80px;
+        color: #000;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+        &:hover {
+            color: #fff;
+            background-color: #357ebd;
+        }
+        &.active {
+            color: #fff;
+            border: 1px solid #357ebd;
+            background-color: #428bca;
+            &:hover {
+                color: #fff;
+                background-color: #357ebd;
+            }
+        }
+    }
+}

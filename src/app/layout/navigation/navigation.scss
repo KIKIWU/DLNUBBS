@@ -1,0 +1,27 @@
+.navbar-reset {
+    background-color: #3361a4;
+    color: #fff;
+    .navbar-header {
+        .navbar-brand {
+            color: #fff;
+        }
+    }
+    .navbar-nav {
+        li {
+            a {
+                color: #ddd;
+                &:hover {
+                    color: #fff;
+                }
+            }
+            &.active a {
+                color: #fff;
+                background-color: #4e7cc4;
+                &:hover {
+                    color: #fff;
+                    background-color: #4e7cc4;
+                }
+            }
+        }
+    }
+}

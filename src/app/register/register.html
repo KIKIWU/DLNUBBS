@@ -1,0 +1,85 @@
+<div ng-include src="Register.headerView" class="headerView"></div>
+<div class="common-layout">
+	<div class="register-container center-block clearfix">
+	    <div class="register-img pull-left">
+	    	<img src="/app/login/door.jpg">
+	    </div>
+	    <div class="register-content pull-right">
+	    	<form class="form-horizontal" name="userRegister">
+	    	    <div class="form-group">
+	    	   		<h2 class="col-sm-7 col-sm-offset-2">欢迎加入民大人论坛</h2>
+	    	    </div>
+	    	    <p>
+	    	   		<label class="label-name">邮箱：</label>
+	    	   		<label>
+	    	   			<input type="text" class="form-control" name="mail" ng-model="Register.queryObj.mail">
+	    	   		</label>
+	    	    </p>
+	    	    <p>
+	    	   		<label class="label-name">手机号：</label>
+	    	   		<label>
+				        <input type="text" class="form-control" name="phone" ng-model="Register.queryObj.phone">
+	    	   		</label>
+	    	    </p>
+			    <p>
+	    	   		<label class="label-name">昵称：</label>
+	    	   		<label>
+				        <input type="text" class="form-control" name="name" ng-model="Register.queryObj.name">
+	    	   		</label>
+	    	    </p>
+			    <p>
+	    	   		<label class="label-name">密码：</label>
+	    	   		<label>
+				        <input type="text" class="form-control" name="password" ng-model="Register.queryObj.password">
+	    	   		</label>
+	    	    </p>
+				<p>
+	    	   		<label class="label-name">性别：</label>
+	    	   		<label>
+						<input name="inputSex" type="radio" value="man" ng-model="Register.queryObj.sex">男
+	                    <input name="inputSex" type="radio" value="women" ng-model="Register.queryObj.sex">女
+	    	   		</label>
+	    	    </p>
+	    	    <p>
+	    	   		<label class="label-name">学校：</label>
+	    	   		<label>
+				        <input type="text" class="form-control" name="school" ng-model="Register.queryObj.school">
+	    	   		</label>
+	    	    </p>
+	    	    <p>
+	    	   		<label class="label-name">所在企业：</label>
+	    	   		<label>
+				        <input type="text" class="form-control" name="company" ng-model="Register.queryObj.company">
+	    	   		</label>
+	    	    </p>
+	    	    <p>
+	    	   		<label class="label-name">从事行业：</label>
+	    	   		<label>
+				        <input type="text" class="form-control" name="work" ng-model="Register.queryObj.work">
+	    	   		</label>
+	    	    </p>
+	    	    <p>
+	    	   		<label class="label-name">所在地址：</label>
+	    	   		<label>
+				        <input type="text" class="form-control" name="address" ng-model="Register.queryObj.address">
+	    	   		</label>
+	    	    </p>
+				<!-- <p> -->
+			        <div class="checkbox">
+				        <label class="col-sm-2">
+				            <input type="checkbox"> 记住我
+				        </label>
+				        <div class="col-sm-offset-1 col-sm-4">已有账号？马上<a href="#/login">登录</a></div>
+			        </div>
+
+				<!-- </p> -->
+				<div class="form-group" id="common-form">
+				    <div class="col-sm-offset-2 col-sm-10">
+				        <button type="submit" class="btn bg-success common-btn" ng-click="Register.cheackRegister()">登录</button>
+				    </div>
+				</div>
+			</form>
+	    </div>
+	</div>
+</div>
+<div ng-include src="Register.footerView" class="footerView"></div>

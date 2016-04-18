@@ -1,0 +1,90 @@
+$prey : #f9f9f9;
+$common: #85C155;
+$linear: #D9D9D9;
+.common-layout {
+	width: 100%;
+	background-color: #fff; 
+}
+.linear-wp {
+	width: 100%;
+	height: 8px;
+	background-color: #8AACDE;
+}
+a {
+	color: #0078b6;
+}
+.logo {
+    color: $common;
+}
+.header {
+	width: 100%;
+	// height: 80px;
+	background-color: #fff;
+	border-bottom: 2px solid #f2f2f2;
+	.header-wp-b {
+		border-bottom: 1px solid #e0e0e0;
+		// height: 80px;
+		.header-content {
+			width: 960px;
+			height: 80px;
+            padding: 20px 0 0 0;
+		}
+	}
+}
+.footer {
+	font-size: 12px;
+    color: #999;
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+    clear: both;
+    line-height: 35px;
+    margin: 30px auto 0;
+    overflow: hidden;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 1000px;
+    .footer-i {
+		border-top: 1px solid #ececec;
+    }
+    .footer-nav ul li{ 
+        margin: 0 10px;
+    }
+}
+
+.login-container, .register-container {
+	width: 960px;
+	height: 400px;
+	background-color: $prey;
+	margin-top: 30px;
+    border-radius: 4px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: visible!important;
+    .login-img, .register-img {
+    	padding: 0 15px 0 15px; 
+    	border-right: 1px solid $linear;
+    	img {
+	    	width: 385px;
+	    	height: 310px;
+	    	opacity: 0.7;
+	    }
+    }
+    .login-content, .register-content { 
+    	padding: 0 20px 0 20px; 
+    	width: 540px;
+    	height: 340px;
+        p .label-name {
+            width: 80px;
+            text-align: right;
+            padding: 0;
+        }
+    }
+    .register-img img {
+        height: 380px;
+    }
+}
+.register-container {
+    height: 600px;
+}
+

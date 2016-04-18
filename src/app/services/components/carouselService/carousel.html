@@ -1,0 +1,21 @@
+<div class="clearfix">
+    <span class="close carousel-close btn btn-xs btn-default" ng-click="Carousel.close()">&times;</span>
+</div>
+  <div class="modal-body carousel">
+
+    <div class="slides-nav">
+        <span class="pull-left">{{Carousel.slideItem[Carousel.titleKey]}}</span>
+        <div class="btn-group slide-operate" ng-if="Carousel.slidesData.length >= 1">
+            <span class="btn btn-xs btn-default"  ng-click="Carousel.rotateLeft()"><i class="fa fa-undo"></i></span>
+            <span class="btn btn-xs btn-default" ng-click="Carousel.zoomOut()"><i class="fa fa-search-minus"></i></span>
+            <span class="btn btn-xs btn-default" ng-click="Carousel.prevImage()"><i class="fa fa-chevron-left"></i></span>
+            <span class="btn btn-xs btn-default" ng-click="Carousel.nextImage()"><i class="fa fa-chevron-right"></i></span>
+            <span class="btn btn-xs btn-default" ng-click="Carousel.zoomIn()"><i class="fa fa-search-plus"></i></span>
+            <span class="btn btn-xs btn-default"  ng-click="Carousel.rotateRight()"><i class="fa fa-repeat"></i></span>
+        </div>
+        <span class="pull-right">共{{Carousel.slidesData.length}}页, 第{{Carousel.slideIndex + 1}}页</span>
+    </div>
+    <div class="slides-container">
+        <img style="color: red" class="slide display-none {{'slide-' + $index}}" ng-repeat="item in Carousel.slidesData track by $index" ng-class="{active: Carousel.slideIndex === $index}" ng-src={{item[Carousel.urlKey]}}>
+    </div>
+</div>

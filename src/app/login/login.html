@@ -1,0 +1,41 @@
+<div ng-include src="Login.headerView" class="headerView"></div>
+<div class="common-layout">
+	<div class="login-container center-block clearfix">
+	    <div class="login-img pull-left">
+	    	<img src="/app/login/bgd.jpg">
+	    </div>
+	    <div class="login-content pull-right">
+	    	<form class="form-horizontal" name="userLogin">
+	    		<h2 class="col-sm-7 col-sm-offset-2">欢迎来到民大人论坛</h2>
+			    <div class="form-group" id="common-form">
+				    <!-- <label for="inputEmail3" class="col-sm-2 control-label">用户名</label> -->
+				    <div class="col-sm-7 col-sm-offset-2">
+				        <input type="email" class="form-control" id="inputEmail3" ng-model="Login.user.mail" placeholder="邮箱">
+				    </div>
+			    </div>
+				<div class="form-group" id="common-form">
+				    <!-- <label for="inputPassword3" class="col-sm-2 control-label">密码</label> -->
+				    <div class="col-sm-7 col-sm-offset-2">
+				        <input type="password" class="form-control" id="inputPassword3" ng-model="Login.user.password" placeholder="密码">
+				    </div>
+				</div>
+				<div class="form-group" id="common-form">
+				    <div class="col-sm-offset-2 col-sm-7">
+				        <div class="checkbox">
+					        <label class="col-sm-4">
+					            <input type="checkbox"> 记住我
+					        </label>
+					        <div class="pull-right">还没账号？马上<a href="#/register">注册</a></div>
+				        </div>
+				    </div>
+				</div>
+				<div class="form-group" id="common-form">
+				    <div class="col-sm-offset-2 col-sm-10">
+				        <button type="submit" class="btn bg-success common-btn" ng-click="Login.cheacklogin()">登录</button>
+				    </div>
+				</div>
+			</form>
+	    </div>
+	</div>
+</div>
+<div ng-include src="Login.footerView" class="footerView"></div>

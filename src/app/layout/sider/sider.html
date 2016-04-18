@@ -1,0 +1,36 @@
+<ul class="nav nav-list">
+    <li class="nav-header"><label><i class="fa fa-building"></i>酒店结算<i ng-click="Sider.isCollapsed['hotel'] = !Sider.isCollapsed['hotel']" class="fa icon-right" ng-class="!Sider.isCollapsed['hotel'] ? 'fa-minus-square-o' : 'fa-plus-square'"></i></label>
+        <ul class="list-group" uib-collapse="Sider.isCollapsed['hotel']">
+            <!-- <li><a href="#/app/hotel/settleinfo/list/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/hotel/settleinfo/list')}">结算信息</a></li> -->
+            <li><a href="#/app/hotel/statement/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/hotel/statement')}">结算－对账</a></li>
+            <!-- <li><a href="#/app/hotel/payment/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/hotel/payment')}">结算－打款</a></li>
+            <li><a href="#/app/hotel/settleinfo/modify/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/hotel/settleinfo/modify')}">结算信息变更列表</a></li> -->
+        </ul>
+    </li>
+    <li class="nav-header">
+        <label>
+            <i class="fa fa-globe"></i>旅游结算
+            <i ng-click="Sider.isCollapsed['travel'] = !Sider.isCollapsed['travel']" class="fa icon-right" ng-class="!Sider.isCollapsed['travel'] ? 'fa-minus-square-o' : 'fa-plus-square'"></i>
+        </label>
+        <ul class="list-group" uib-collapse="Sider.isCollapsed['travel']">
+            <li><a href="#/app/travel/settleinfo/list/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/travel/settleinfo/list')}">结算信息</a></li>
+            <li><a href="#/app/travel/statement/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/travel/statement')}">结算－对账</a></li>
+            <li><a href="#/app/travel/payment/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/travel/payment')}">结算－打款</a></li>
+<!--            <li><a href="#/app/travel/settleinfo/modify/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/travel/settleinfo/modify')}">结算信息变更列表</a></li>-->
+        </ul>
+    </li>
+    <li class="nav-header"><label><i class="fa fa-train"></i>火车票结算<i ng-click="Sider.isCollapsed['train'] = !Sider.isCollapsed['train']" class="fa icon-right" ng-class="!Sider.isCollapsed['train'] ? 'fa-minus-square-o' : 'fa-plus-square'"></i></label>
+        <ul class="list-group" uib-collapse="Sider.isCollapsed['train']">
+<!--            <li><a href="#/app/train/settleinfo/list/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/train/settleinfo/list')}">结算信息</a></li>-->
+<!--            <li><a href="#/app/train/statement/" class="list-group-item sider-item" ng-class="{active:isStartBy('/train/statement')}">结算－对账</a></li>-->
+            <li><a href="#/app/train/payment/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/train/payment')}">结算－打款</a></li>
+<!--            <li><a href="#/app/train/settleinfo/modify/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/train/settleinfo/modify')}">结算信息变更列表</a></li>-->
+        </ul>
+    </li>
+    <li class="nav-header"><label><i class="fa fa-jpy"></i>保险结算<i ng-click="Sider.isCollapsed['insurance'] = !Sider.isCollapsed['insurance']" class="fa icon-right" ng-class="!Sider.isCollapsed['insurance'] ? 'fa-minus-square-o' : 'fa-plus-square'"></i></label>
+        <ul class="list-group" uib-collapse="Sider.isCollapsed['insurance']">
+            <li><a href="#/app/insurance/payment/" class="list-group-item sider-item" ng-class="{active:Sider.isStartBy('/insurance/payment')}">结算－打款</a></li>
+        </ul>
+    </li>
+</ul>
+
