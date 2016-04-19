@@ -25,7 +25,7 @@
             var copy = angular.copy(vm.queryObj);
             console.log(copy);
             copy.requestTime = new Date().getTime();
-            homeApiService.register(copy, function(result){
+            homeApiService.register(null, copy, function(result){
 
                 if(result.code === 200){
                     var tips = {

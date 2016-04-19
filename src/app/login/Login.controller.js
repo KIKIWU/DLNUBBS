@@ -26,7 +26,7 @@
         function cheacklogin() {
             var copy = angular.copy(vm.user);
             copy.requestTime = new Date().getTime();
-            homeApiService.login(copy, function(result){
+            homeApiService.login(null, copy, function(result){
 
                 if(result.code === 200){
                     console.log("登录成功");
