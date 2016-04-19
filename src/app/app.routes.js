@@ -103,6 +103,14 @@
 
         $httpProvider.interceptors.push('httpInterceptor');
         $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+        // $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+        // $httpProvider.defaults.transformRequest = function(data){
+        //    if (data === undefined) {
+        //        return data;
+        //    }
+        //    return $.param(data);
+        // }
+
         loadingBar.spinnerTemplate = '<div class="loading-bar"><span class="fa fa-spinner loading-icon">加载中...</span></div>';
     }
 })();
