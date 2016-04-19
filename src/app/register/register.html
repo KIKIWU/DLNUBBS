@@ -34,16 +34,16 @@
 			    <p>
 	    	   		<label class="label-name"><i> * </i>密码：</label>
 	    	   		<label>
-				        <input type="password" class="form-control" name="password" ng-model="Register.queryObj.password" required>
+				        <input type="password" class="form-control" name="password" id="password" ng-model="Register.queryObj.password" required>
 	    	   		</label>
 	    	   		<i ng-show="form.userRegister.password.$invalid && !form.userRegister.password.$pristine">（不能为空）</i>
 	    	    </p>
 	    	    <p>
 	    	   		<label class="label-name"><i> * </i>确认密码：</label>
 	    	   		<label>
-				        <input type="password" class="form-control" name="confirmPassword" ng-model="Register.queryObj.confirmPassword" required>
+				        <input type="password" class="form-control" name="confirmPassword" ng-model="Register.queryObj.confirmPassword" pw-check="password" required>
 	    	   		</label>
-	    	   		<i ng-show="form.userRegister.password.$invalid && !form.userRegister.password.$pristine">（请密码保持一致）</i>
+	    	   		<i data-rr={{form.userRegister.confirmPassword.$invalid}} ng-show="form.userRegister.confirmPassword.$invalid && !form.userRegister.confirmPassword.$pristine">（请密码保持一致）</i>
 	    	    </p>
 				<p>
 	    	   		<label class="label-name"><i> * </i>性别：</label>
