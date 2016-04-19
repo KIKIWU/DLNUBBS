@@ -18,6 +18,7 @@
             login: {
                 url: ' http://www.dlnubbs.com/web/Auth/login',
                 method: 'POST',
+                ignoreLoadingBar: true
             },
             /**
             * 注册  POST

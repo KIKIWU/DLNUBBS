@@ -66,6 +66,9 @@ a {
       width: 80px;
       text-align: right;
       padding: 0; }
+    .login-container .login-content p i, .login-container .register-content p i, .register-container .login-content p i, .register-container .register-content p i {
+      color: red;
+      font-size: 12px; }
   .login-container .register-img img, .register-container .register-img img {
     height: 380px; }
 
