@@ -52,6 +52,10 @@
                 text: 'balabala',
                 url: 0
             },{
+                title: '研究生考试报名结束啦',
+                text: 'balabala',
+                url: 2
+            },{
                 title: '大连民族大学第what届热舞大赛',
                 text: 'balabala',
                 url: 1
