@@ -29,17 +29,24 @@
                 <div class="group-title">
                     <h4>热门推荐</h4>
                 </div>
-    			<div class="carousel-show">
-    				<uib-carousel active="Home.carousel.active" interval="Home.carousel.myInterval" no-wrap="Home.carousel.noWrapSlides" no-pause="true" no-transition="Home.carousel.transition">
-                        <uib-slide ng-repeat="slide in Home.carousel.slides track by slide.id" index="slide.id">
-                            <img ng-src="{{slide.image}}">
-                            <div class="carousel-caption">
-                                <h4>Slide {{slide.id}}</h4>
-                                <p>{{slide.text}}</p>
-                            </div>
-                        </uib-slide>
-                    </uib-carousel>
-    			</div>
+                <div class="hot-wrap">
+                    <div class="carousel-show">
+                        <uib-carousel active="Home.carousel.active" interval="Home.carousel.myInterval" no-wrap="Home.carousel.noWrapSlides" no-pause="true" no-transition="Home.carousel.transition">
+                            <uib-slide ng-repeat="slide in Home.carousel.slides track by slide.id" index="slide.id">
+                                <img ng-src="{{slide.image}}">
+                                <div class="carousel-caption">
+                                    <h5>Slide {{slide.id}}</h5>
+                                    <p>{{slide.text}}</p>
+                                </div>
+                            </uib-slide>
+                        </uib-carousel>
+                    </div>
+                    <div class="hot-article">
+                        <ul>
+                            <li ng-repeat="artice in Home.hot"><a href="artice.url">{{artice.title}}</a></li>
+                        </ul>
+                    </div>
+                </div>
     			<div>
     				<p>分类模块</p>
     			</div>

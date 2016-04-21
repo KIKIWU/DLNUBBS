@@ -20,10 +20,10 @@
         }
         function _initialization() {
             vm.carousel = {
-                myInterval: 3000,
+                myInterval: 5000,
                 noWrapSlides: false,
                 active: 0,
-                transition: true,
+                transition: false,
                 slides: [{
                     image: '/app/images/home/bgd.jpg',
                     text: 'balabala',
@@ -33,9 +33,13 @@
                     text: 'balabala',
                     id: 1
                 },{
-                    image: '/app/images/home/bgd.jpg',
+                    image: '/app/images/home/0001.jpg',
                     text: 'balabala',
                     id: 2
+                 },{
+                    image: '/app/images/home/door.jpg',
+                    text: 'balabala',
+                    id: 3
                 }]
             };
 

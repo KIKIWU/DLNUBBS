@@ -111,10 +111,10 @@ h2 {
           font-weight: normal;
           font-size: 18px;
           font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif; }
-      .container .content-layout .content .main .carousel-show {
+      .container .content-layout .content .main .hot-wrap .carousel-show {
         width: 430px;
         height: 260px; }
-      .container .content-layout .content .main .carousel {
-        margin: 0 0 0 0; }
+      .container .content-layout .content .main .hot-wrap .carousel {
+        margin: 20px 0 0 0; }
     .container .content-layout .content .side {
       width: 320px; }
