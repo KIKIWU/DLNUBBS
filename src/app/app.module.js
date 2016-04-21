@@ -8,6 +8,7 @@
             'ngLocale',
             'ui.bootstrap',
             'app.templateCache',
-            'angular-loading-bar'
+            'angular-loading-bar',
+            'ngAnimate'
         ])
 })();

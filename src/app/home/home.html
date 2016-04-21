@@ -29,8 +29,16 @@
                 <div class="group-title">
                     <h4>热门推荐</h4>
                 </div>
-    			<div class="carousel">
-    				<!-- <p>热门推荐</p> -->
+    			<div class="carousel-show">
+    				<uib-carousel active="Home.carousel.active" interval="Home.carousel.myInterval" no-wrap="Home.carousel.noWrapSlides" no-pause="true" no-transition="Home.carousel.transition">
+                        <uib-slide ng-repeat="slide in Home.carousel.slides track by slide.id" index="slide.id">
+                            <img ng-src="{{slide.image}}">
+                            <div class="carousel-caption">
+                                <h4>Slide {{slide.id}}</h4>
+                                <p>{{slide.text}}</p>
+                            </div>
+                        </uib-slide>
+                    </uib-carousel>
     			</div>
     			<div>
     				<p>分类模块</p>

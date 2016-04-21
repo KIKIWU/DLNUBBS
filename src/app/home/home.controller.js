@@ -18,7 +18,28 @@
         function activate() {
             _initialization();
         }
-        function _initialization() {}
+        function _initialization() {
+            vm.carousel = {
+                myInterval: 3000,
+                noWrapSlides: false,
+                active: 0,
+                transition: true,
+                slides: [{
+                    image: '/app/images/home/bgd.jpg',
+                    text: 'balabala',
+                    id: 0
+                },{
+                    image: '/app/images/home/door.jpg',
+                    text: 'balabala',
+                    id: 1
+                },{
+                    image: '/app/images/home/bgd.jpg',
+                    text: 'balabala',
+                    id: 2
+                }]
+            };
+
+        }
 
 
     }
