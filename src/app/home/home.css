@@ -111,10 +111,16 @@ h2 {
           font-weight: normal;
           font-size: 18px;
           font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif; }
+      .container .content-layout .content .main .hot-wrap .hot-article {
+        display: inline-block;
+        width: 290px; }
       .container .content-layout .content .main .hot-wrap .carousel-show {
-        width: 430px;
-        height: 260px; }
+        display: inline-block;
+        width: 380px;
+        height: 230px; }
       .container .content-layout .content .main .hot-wrap .carousel {
-        margin: 20px 0 0 0; }
+        margin: 20px 0 0 0;
+        width: 100%;
+        height: 100%; }
     .container .content-layout .content .side {
       width: 320px; }

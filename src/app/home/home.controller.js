@@ -12,11 +12,13 @@
     function HomeController($scope, $stateParams){
         var vm = this;
         var _initialization = _initialization;
+        vm.getHotArticle = getHotArticle;
         
         activate();
 
         function activate() {
             _initialization();
+            vm.getHotArticle();
         }
         function _initialization() {
             vm.carousel = {
@@ -43,6 +45,25 @@
                 }]
             };
 
+        }
+        function getHotArticle() {
+            vm.hot = [{
+                title: '大连民族大学第what届热舞大赛',
+                text: 'balabala',
+                url: 0
+            },{
+                title: '大连民族大学第what届热舞大赛',
+                text: 'balabala',
+                url: 1
+            },{
+                title: '研究生考试报名结束啦',
+                text: 'balabala',
+                url: 2
+             },{
+                title: '盘点民院最美教室',
+                text: 'balabala',
+                url: 3
+            }];
         }
 
 
