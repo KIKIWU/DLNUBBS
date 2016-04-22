@@ -220,12 +220,20 @@ h4 {
 					ul {
 						li {
 						    margin-bottom: 20px;
-						    height: 48px;
+						    height: 40px;
 						    position: relative;
 						    overflow: hidden;
+						    .job-blackboard {
+						    	margin-left: 10px;
+						    	display: inline-block;
+						    	a {
+						    		display: block;
+						    	}
+						    }
 						    img {
 						    	width: 40px;
 						    	height: 40px;
+						    	vertical-align: bottom;
 						    }
 						}
 					}

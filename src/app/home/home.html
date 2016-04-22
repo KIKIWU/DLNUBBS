@@ -58,8 +58,12 @@
                 <div class="side-group">
                     <ul>
                         <li class="side-group-item" ng-repeat="item in Home.employment">
-                        <img src="{{item.headimg}}">
-                        <a href={{item.url}}>{{item.title}}</a></li>
+                            <img src="{{item.headimg}}">
+                            <div class="job-blackboard">
+                                <a href={{item.url}}>{{item.title}}</a>
+                                <label>发布人：{{item.author}}</label>
+                            </div>
+                        </li>
                     </ul>
                 </div>      
             </div>
