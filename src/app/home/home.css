@@ -6,7 +6,8 @@
 body {
   color: #666;
   font-size: 14px;
-  font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif; }
+  font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif;
+  -webkit-font-smoothing: antialiased; }
 
 li {
   list-style-type: none; }
@@ -17,6 +18,9 @@ h2 {
   margin-top: 0;
   margin-bottom: 15px;
   font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif;
+  font-weight: normal; }
+
+h4 {
   font-weight: normal; }
 
 #common-form {
@@ -150,4 +154,27 @@ h2 {
           width: 100%;
           height: 100%; }
     .container .content-layout .content .side {
-      width: 320px; }
+      width: 330px;
+      font-size: 12px;
+      padding: 20px 0 0 0; }
+      .container .content-layout .content .side .side-title {
+        margin-top: 17px; }
+        .container .content-layout .content .side .side-title h4 {
+          color: #333;
+          text-align: left;
+          font-size: 16px;
+          font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif;
+          line-height: 16px;
+          margin-right: 5px; }
+      .container .content-layout .content .side .side-group {
+        overflow: hidden;
+        margin-top: 18px;
+        margin-bottom: 30px; }
+        .container .content-layout .content .side .side-group ul li {
+          margin-bottom: 20px;
+          height: 48px;
+          position: relative;
+          overflow: hidden; }
+          .container .content-layout .content .side .side-group ul li img {
+            width: 40px;
+            height: 40px; }

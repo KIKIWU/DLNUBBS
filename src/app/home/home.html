@@ -51,7 +51,18 @@
                     <h4>精选模块</h4>
                 </div>
     		</div>
-    		<div class="side pull-right"></div>
+    		<div class="side pull-right">
+                <div class="side-title">
+                    <h4>招聘黑板报</h4>
+                </div>
+                <div class="side-group">
+                    <ul>
+                        <li class="side-group-item" ng-repeat="item in Home.employment">
+                        <img src="{{item.headimg}}">
+                        <a href={{item.url}}>{{item.title}}</a></li>
+                    </ul>
+                </div>      
+            </div>
     	</div>
     </div>
     <div class="footer"></div>
