@@ -63,7 +63,15 @@
                 title: '研究生考试报名结束啦',
                 text: 'balabala',
                 url: 2
-             },{
+            },{
+                title: '发现王国年卡团购开始啦，组团有意的小船说了不翻balabalabala',
+                text: 'balabala',
+                url: 2
+            },{
+                title: '发现王国年卡团购开始啦，组团有意的小船说了不翻balabalabala',
+                text: 'balabala',
+                url: 2
+            },{
                 title: '盘点民院最美教室',
                 text: 'balabala',
                 url: 3

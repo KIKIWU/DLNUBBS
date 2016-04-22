@@ -1,3 +1,6 @@
+$blue : #2EA1CF;
+$common: #85C155;
+$font-blue: #0078B6;
 .jumbotron {
 	text-align: center;
 	margin: 30px 20px 30px 20px;
@@ -138,7 +141,22 @@ h2 {
 					    font-family: "Microsoft YaHei","WenQuanYi Micro Hei",SimHei,tahoma,sans-serif;
 				    }
     			}
+    			.group-title-green {
+    				border-bottom: 1px solid $common;
+    				h4{
+    					color: $common;
+    				}
+    			}
+    			.group-title-blue {
+    				margin-top: 20px;
+    				border-bottom: 1px solid #c5ebf9;
+    				h4{
+    					color: #0078b6;
+    				}
+    			}
     			.hot-wrap {
+
+    				height: 250px;
     				.hot-article {
     					display: inline-block;
     					width: 290px;
@@ -146,9 +164,10 @@ h2 {
     						margin-top: 20px;
     						li {
 	    						// float: left;
-							    width: 320px;
+							    width: 290px;
 							    height: 24px;
 							    margin: 0 0 7px 0;
+							    overflow: hidden;
 							    a {
 							    	color: #666;
 							    	font-size: 16px;
