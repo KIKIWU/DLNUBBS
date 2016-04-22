@@ -78,15 +78,15 @@
             }];
             vm.employment = [{
                 title: '美团网酒店旅游事业群诚招高级前端开发工程师',
-                headimg: '/app/images/home/meituan.jpg',
+                headimg: '/app/images/home/meituan.png',
                 url: 0
             },{
                 title: '滴滴打车社招内推php',
-                headimg: '/app/images/home/didi.jpg',
+                headimg: '/app/images/home/didi.png',
                 url: 2
             },{
                 title: '美团网外卖事业群诚招前端',
-                headimg: '/app/images/home/meituan.jpg',
+                headimg: '/app/images/home/meituan.png',
                 url: 1
             },{
                 title: '百度2017年校园招聘内推报名',
@@ -94,7 +94,7 @@
                 url: 2
             },{
                 title: '人人车招聘市场运营',
-                headimg: '/app/images/home/renrenche.jpg',
+                headimg: '/app/images/home/renrenche.png',
                 url: 2
             }];
         }
