@@ -13,6 +13,7 @@
         var vm = this;
         var _initialization = _initialization;
         vm.getHotArticle = getHotArticle;
+        vm.footerView = '/app/layout/layoutViews/footer.html';
         
         activate();
 
