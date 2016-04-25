@@ -24,9 +24,6 @@ function getTask(task){
 
 gulp.task('del', getTask('del'));
 gulp.task('watch', getTask('watch'));
-// gulp.task('sass', ['del'], getTask('sass'));
-// gulp.task('webpack:watch', ['del'], getTask('webpack'));
-// gulp.task('webpack:build', ['del'], getTask('webpack'));
 gulp.task('rev', getTask('rev'));
 gulp.task('replace', ['rev'], getTask('replace'));
 gulp.task('r', [], getTask('replace'));

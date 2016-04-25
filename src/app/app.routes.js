@@ -21,10 +21,7 @@
                 controller: 'HomeController',
                 controllerAs: 'Home'
             })
-            .state('root', {
-                url: '/msc',
-                templateUrl: '/app/biz/bizroot.html'
-            })
+            
             .state('login', {
                 url: '/login',
                 templateUrl: '/app/login/login.html',
@@ -36,6 +33,10 @@
                 templateUrl: '/app/register/register.html',
                 controller: 'RegisterController',
                 controllerAs: 'Register'  
+            })
+            .state('root', {
+                url: '/msc',
+                templateUrl: '/app/biz/bizroot.html'
             })
             .state('root.biz', {
                 url: '/biz',
