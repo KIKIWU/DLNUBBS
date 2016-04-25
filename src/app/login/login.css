@@ -57,7 +57,7 @@ a {
     .login-container .login-img img, .login-container .register-img img, .register-container .login-img img, .register-container .register-img img {
       width: 385px;
       height: 310px;
-      opacity: 0.7; }
+      opacity: 0.9; }
   .login-container .login-content, .login-container .register-content, .register-container .login-content, .register-container .register-content {
     padding: 0 20px 0 20px;
     width: 540px;
@@ -70,7 +70,8 @@ a {
       color: red;
       font-size: 12px; }
   .login-container .register-img img, .register-container .register-img img {
-    height: 380px; }
+    height: 500px;
+    opacity: 1; }
 
 .register-container {
   height: 700px; }

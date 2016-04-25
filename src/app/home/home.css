@@ -148,7 +148,8 @@ h4 {
         .container .content-layout .content .main .hot-wrap .carousel-show {
           display: inline-block;
           width: 380px;
-          height: 230px; }
+          height: 230px;
+          overflow: hidden; }
         .container .content-layout .content .main .hot-wrap .carousel {
           margin: 20px 0 0 0;
           width: 100%;
