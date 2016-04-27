@@ -10,43 +10,43 @@
 	    	   		<h2 class="col-sm-7 col-sm-offset-2">欢迎加入民大人论坛</h2>
 	    	    </div>
 	    	    <p>
-	    	   		<label class="label-name"><i> * </i>邮箱：</label>
+	    	   		<label class="label-name"><i> * </i> 邮箱：</label>
 	    	   		<label>
-	    	   			<!-- <input type="text" class="form-control" name="mail" ng-model="Register.queryObj.mail" ng-pattern="/^[a-z]([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,3}([\.][a-z]{2})?$/" required> -->
-	    	   			<input type="email" class="form-control" name="mail" ng-model="Register.queryObj.mail" required>
+	    	   			<!-- <input type="text" class="form-control form-common" name="mail" ng-model="Register.queryObj.mail" ng-pattern="/^[a-z]([a-z0-9]*[-_]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,3}([\.][a-z]{2})?$/" required> -->
+	    	   			<input type="email" class="form-control form-common" name="mail" ng-model="Register.queryObj.mail" required>
 	    	   		</label>
 	    	   		<i ng-show="form.userRegister.mail.$invalid && !form.userRegister.mail.$pristine">（邮箱格式不正确）</i>
 	    	    </p>
 	    	    <p>
-	    	   		<label class="label-name"><i> * </i>手机号：</label>
+	    	   		<label class="label-name"><i> * </i> 手机号：</label>
 	    	   		<label>
-				        <input type="text" class="form-control" name="phone" ng-model="Register.queryObj.phone" ng-pattern="/^\(?(\d{3})\)?[ .-]?(\d{4})[ .-]?(\d{4})$/" required>
+				        <input type="text" class="form-control form-common" name="phone" ng-model="Register.queryObj.phone" ng-pattern="/^\(?(\d{3})\)?[ .-]?(\d{4})[ .-]?(\d{4})$/" required>
 	    	   		</label>
 	    	   		<i ng-show="form.userRegister.phone.$invalid && !form.userRegister.phone.$pristine">（电话格式不正确）</i>
 	    	    </p>
 			    <p>
-			    <label class="label-name"><i> * </i>昵称：</label>
+			    <label class="label-name"><i> * </i> 昵称：</label>
 	    	   		<label>
-				        <input type="text" class="form-control" name="name" ng-model="Register.queryObj.name" required>
+				        <input type="text" class="form-control form-common" name="name" ng-model="Register.queryObj.name" required>
 	    	   		</label>
 	    	   		<i ng-show="form.userRegister.name.$invalid && !form.userRegister.name.$pristine">（不能为空）</i>
 	    	    </p>
 			    <p>
-	    	   		<label class="label-name"><i> * </i>密码：</label>
+	    	   		<label class="label-name"><i> * </i> 密码：</label>
 	    	   		<label>
-				        <input type="password" class="form-control" name="password" id="password" ng-model="Register.queryObj.password" required>
+				        <input type="password" class="form-control form-common" name="password" id="password" ng-model="Register.queryObj.password" required>
 	    	   		</label>
 	    	   		<i ng-show="form.userRegister.password.$invalid && !form.userRegister.password.$pristine">（不能为空）</i>
 	    	    </p>
 	    	    <p>
-	    	   		<label class="label-name"><i> * </i>确认密码：</label>
+	    	   		<label class="label-name"><i> * </i> 确认密码：</label>
 	    	   		<label>
-				        <input type="password" class="form-control" name="confirmPassword" ng-model="Register.queryObj.confirmPassword" pw-check="password" required>
+				        <input type="password" class="form-control form-common" name="confirmPassword" ng-model="Register.queryObj.confirmPassword" pw-check="password" required>
 	    	   		</label>
 	    	   		<i data-rr={{form.userRegister.confirmPassword.$invalid}} ng-show="form.userRegister.confirmPassword.$invalid && !form.userRegister.confirmPassword.$pristine">（请密码保持一致）</i>
 	    	    </p>
 				<p>
-	    	   		<label class="label-name"><i> * </i>性别：</label>
+	    	   		<label class="label-name"><i> * </i> 性别：</label>
 	    	   		<label>
 						<input name="inputSex" type="radio" value="0" ng-model="Register.queryObj.sex" ng-required="true">男
 	                    <input name="inputSex" type="radio" value="1" ng-model="Register.queryObj.sex" ng-required="true">女
@@ -54,40 +54,39 @@
 	    	   		<i ng-show="form.userRegister.inputSex.$invalid && !form.userRegister.inputSex.$pristine">（必选项）</i>
 	    	    </p>
 	    	    <p>
-	    	   		<label class="label-name"><i> * </i>学校：</label>
+	    	   		<label class="label-name"><i> * </i> 学校：</label>
 	    	   		<label>
-				        <input type="text" class="form-control" name="school" ng-model="Register.queryObj.school" required>
+				        <input type="text" class="form-control form-common" name="school" ng-model="Register.queryObj.school" required>
 	    	   		</label>
 	    	    </p>
 	    	    <p>
 	    	   		<label class="label-name">所在企业：</label>
 	    	   		<label>
-				        <input type="text" class="form-control" name="company" ng-model="Register.queryObj.company">
+				        <input type="text" class="form-control form-common" name="company" ng-model="Register.queryObj.company">
 	    	   		</label>
 	    	    </p>
 	    	    <p>
 	    	   		<label class="label-name">从事行业：</label>
 	    	   		<label>
-				        <input type="text" class="form-control" name="work" ng-model="Register.queryObj.work">
+				        <input type="text" class="form-control form-common" name="work" ng-model="Register.queryObj.work">
 	    	   		</label>
 	    	    </p>
 	    	    <p>
 	    	   		<label class="label-name">所在地址：</label>
 	    	   		<label>
-				        <input type="text" class="form-control" name="address" ng-model="Register.queryObj.address">
+				        <input type="text" class="form-control form-common" name="address" ng-model="Register.queryObj.address">
 	    	   		</label>
 	    	    </p>
 				<!-- <p> -->
-			        <div class="checkbox">
-				        <label class="col-sm-2">
-				            <input type="checkbox"> 记住我
-				        </label>
-				        <div class="col-sm-offset-1 col-sm-4">已有账号？马上<a href="#/login">登录</a></div>
-			        </div>
+		        <div class="checkbox">
+			        <label class="col-sm-2">
+			            <input type="checkbox"> 记住我
+			        </label>
+			        <div class="col-sm-offset-1 col-sm-4">已有账号？马上<a href="#/login">登录</a></div>
+		        </div>
 
-				<!-- </p> -->
 				<div class="form-group" id="common-form">
-				    <div class="col-sm-offset-2 col-sm-10">
+				    <div class="col-sm-offset-2 col-sm-10" id="login-btn">
 				        <button type="submit" class="btn btn-success common-btn" ng-click="Register.cheackRegister()" ng-disabled="form.userRegister.$invalid">登录</button>
 				        <i class="text-warning" ng-show="form.userRegister.$invalid && !form.userRegister.$pristine">（ * 为必填项哦！）</i>
 				    </div>

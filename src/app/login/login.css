@@ -7,6 +7,9 @@
   height: 5px;
   background-color: #8AACDE; }
 
+.form-common {
+  height: 30px; }
+
 a {
   color: #0078b6; }
 
@@ -65,7 +68,8 @@ a {
     .login-container .login-content p .label-name, .login-container .register-content p .label-name, .register-container .login-content p .label-name, .register-container .register-content p .label-name {
       width: 80px;
       text-align: right;
-      padding: 0; }
+      padding: 0;
+      font-weight: normal; }
     .login-container .login-content p i, .login-container .register-content p i, .register-container .login-content p i, .register-container .register-content p i {
       color: red;
       font-size: 12px; }
@@ -74,4 +78,8 @@ a {
     opacity: 1; }
 
 .register-container {
-  height: 700px; }
+  height: 650px; }
+  .register-container .checkbox {
+    margin: 0 0 9px 0; }
+  .register-container #login-btn {
+    paddding: 0; }
