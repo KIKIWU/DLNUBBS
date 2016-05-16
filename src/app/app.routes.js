@@ -21,7 +21,7 @@
                 controller: 'HomeController',
                 controllerAs: 'Home'
             })
-            .state('home.detail', {
+            .state('detail', {
                 url: '/detail/:id',
                 templateUrl: '/app/home/detail/arcticleDetail.html',
                 controller: 'HomeDetailController',

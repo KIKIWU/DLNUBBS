@@ -3,9 +3,9 @@
 
     angular
         .module('app')
-        .controller('homeDetailController', homeDetailController);
+        .controller('HomeDetailController', HomeDetailController);
 
-    homeDetailController.$inject = [
+    HomeDetailController.$inject = [
         '$scope',
         '$stateParams',
         'dialogService', 
@@ -14,7 +14,7 @@
     ];
 
     /* @ngInject */
-    function homeDetailController($scope, $stateParams, dialogService, homeApiService, homeConfigService) {
+    function HomeDetailController($scope, $stateParams, dialogService, homeApiService, homeConfigService) {
         var vm = this;
         var _initialization = _initialization;
         vm.headerView = '/app/layout/layoutViews/header.html';
