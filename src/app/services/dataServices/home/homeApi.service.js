@@ -26,6 +26,20 @@
             register: {
                 url: 'http://www.dlnubbs.com/web/Auth/register',
                 method: 'POST',
+            },
+            /**
+            * 获取文章列表
+            */
+            getArticles: {
+                url: 'http://www.dlnubbs.com/web/Artile/getList',
+                method: 'POST',
+            },
+            /**
+            *获取文章类型 POST
+            */
+            getArticleKinds: {
+                url: 'http://www.dlnubbs.com/web/ArtileKind/getKind',
+                method: 'POST',
             }
         });
     }

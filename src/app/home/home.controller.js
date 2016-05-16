@@ -5,14 +5,20 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope',
-        '$stateParams'];
+    HomeController.$inject = [
+        '$scope',
+        '$stateParams',
+        'dialogService', 
+        'homeApiService',
+        'homeConfigService'
+    ];
 
     /* @ngInject */
-    function HomeController($scope, $stateParams){
+    function HomeController($scope, $stateParams, dialogService, homeApiService, homeConfigService){
         var vm = this;
         var _initialization = _initialization;
         vm.getHotArticle = getHotArticle;
+        vm.getArticleKinds = getArticleKinds;
         vm.footerView = '/app/layout/layoutViews/footer.html';
         
         activate();
@@ -20,6 +26,7 @@
         function activate() {
             _initialization();
             vm.getHotArticle();
+            vm.getArticleKinds();
         }
         function _initialization() {
             vm.carousel = {
@@ -55,7 +62,15 @@
             };
 
         }
-        function getHotArticle() {
+        function getHotArticle(page, limit) {
+            var params = {};
+            homeApiService.getArticles(null, params, function(result){
+
+                if(result.code === 200){ 
+                    var hot = result.data;
+                    vm.hot = hot;
+                }
+            });
             vm.hot = [{
                 title: '大连民族大学第what届热舞大赛',
                 text: 'balabala',
@@ -111,6 +126,41 @@
                 headimg: '/app/images/home/renrenche.png',
                 url: 2
             }];
+        }
+        function getArticleKinds() {
+            var params = {};
+            homeApiService.getArticleKinds(null, params, function(result){
+
+                if(result.code === 200){ 
+                    var kinds = result.data;
+                    vm.kinds = {};
+                    var right = angular.copy(kinds);
+                    var number = Math.ceil(kinds.length/2);
+                    vm.kinds.left = kinds.splice(0, number);
+                    console.log(right + '-' + number);
+                    vm.kinds.right = right.splice(number, right.length);
+                }
+            });
+            var kinds = [{
+                name: '社区活动'
+        
+            },{
+                name: '考研专区'
+               
+            },{
+                name: '兼职招聘'
+               
+            },{
+                name: '校园专栏'
+                
+            }];
+            vm.kinds = {};
+            var right = angular.copy(kinds);
+            
+            var number = Math.ceil(kinds.length/2);
+            vm.kinds.left = kinds.splice(0, number);
+            vm.kinds.right = right.splice(number, right.length);
+            console.log(vm.kinds);
         }
 
 

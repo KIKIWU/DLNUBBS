@@ -29,7 +29,8 @@
                     delete cleanParams[key];
                 }
             });
-
+            params.appName = '7scPLxvz1pgWzNnq2sTFNnd8c1EPsix2Z7JbdFjodvFXRzpxz5KiVAmsGryP9gwHxOLT4BYl8sqbUrlhgUld4w==';
+            params.requestTime = new Date().getTime();
             return cleanParams;
         }
 

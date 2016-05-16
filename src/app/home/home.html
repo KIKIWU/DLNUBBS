@@ -1,4 +1,6 @@
-<div class="container">
+
+<div ui-view="home">
+  <div class="container">
     
     <header class="header">
     <div class="linear-wp"></div>
@@ -25,8 +27,8 @@
             </div>
             
         </div>
-    	<div class="content center-block clearfix">
-    		<div class="main pull-left">
+        <div class="content center-block clearfix">
+            <div class="main pull-left">
                 <div class="group-title group-title-default">
                     <h4>热门推荐</h4>
                 </div>
@@ -48,13 +50,13 @@
                         </ul>
                     </div>
                 </div>
-    			<div class="group-title group-title-blue">
+                <div class="group-title group-title-blue">
                     <h4>精选模块</h4>
                 </div>
                 <div class="group-wrap clearfix">
                     <div class="article-group-l col-md-6">
-                        <div class="article-group">
-                            <h4>校园专栏</h4>
+                        <div class="article-group" ng-repeat="kind in Home.kinds.left">
+                            <h4>{{kind.name}}</h4>
                             <ul>
                                 <li><a href="">劲爆的国际音乐节马上就要来了。听惯了吉他的声音，是否想过来听听贝斯的声音？</a></li>
                                 <li>
@@ -62,9 +64,10 @@
                                 </li>
                                 <li><a href="">给大家讲一个我的故事吧，现在回想起来就当是个乐吧</a></li>
                                 <li><a href="">你好，陌生人，我们一起来写集体日记吧</a></li>
+                                <!-- <li ng-repeat= ""></li> -->
                             </ul>
                         </div>
-                        <div class="article-group">
+                        <!-- <div class="article-group">
                             <h4>考研专区</h4>
                             <ul>
                                 <li><a href="">【建筑考研】哈工大建筑学考研经验</a></li>
@@ -72,11 +75,11 @@
                                 <li><a href="">开发区求考研合租室友嘤嘤嘤！！</a></li>
                                 <li><a href="">学姐出售考研工具书</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="article-group-r col-md-6">
-                        <div class="article-group">
-                            <h4>社区活动</h4>
+                        <div class="article-group"  ng-repeat="kind in Home.kinds.right">
+                            <h4>{{kind.name}}</h4>
                             <ul>
                                 <li><a href="">【顺时针车协】第三届公益骑行活动圆满成功</a></li>
                                 <li><a href="">大连高校【最美骑手】活动报名开始了！</a></li>
@@ -85,7 +88,7 @@
                                 <li><a href="">【唱响团】 “我是歌手”演唱会重磅来袭！！</a></li>
                             </ul>
                         </div>
-                        <div class="article-group">
+                       <!--  <div class="article-group">
                             <h4>兼职招聘</h4>
                             <ul>
                                 <li><a href="">『四月兼职贴』二手/兼职/广告/交易信息统一归纳贴</a></li>
@@ -93,11 +96,11 @@
                                 <li><a href="">开发区麦凯乐一层促销活动时薪</a></li>
                                 <li><a href="">发现王国售货员招兼职啦</a></li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-    		</div>
-    		<div class="side pull-right">
+            </div>
+            <div class="side pull-right">
                 <div class="side-title">
                     <h4>招聘黑板报</h4>
                 </div>
@@ -113,12 +116,10 @@
                     </ul>
                 </div>      
             </div>
-    	</div>
+        </div>
     </div>
     <div ng-include src="Home.footerView" class="footerView"></div>
 </div>
-<div ui-view="home">
-  
 </div>
 <!-- div.className -->
 <!-- div#IdName -->
