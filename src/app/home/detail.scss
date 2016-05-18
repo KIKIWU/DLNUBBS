@@ -1,0 +1,81 @@
+.detailHeader {
+	.header {
+		.header-wp-b .header-content {
+			width: 960px;
+			height: 50px;
+            padding: 20px 0 0 0;
+            position: relative;
+            .logo {
+            	//height: 50px;
+            	margin-top: 0;
+            }
+            .userMesssage {
+            	position: absolute;
+            	right: 0px;
+            	bottom: 0px;
+            	label {
+            		font-weight: normal;
+            	}
+            }
+		}
+	}
+}
+.detailFooterView {
+	width: 960px;
+	.footer {
+		width: 960px;
+	}
+}
+.detail-layout {
+	width: 960px;
+	.article-layout {
+		padding: 20px 0 20px 0;
+		.article-title-w {
+            h4 {
+            	font-size: 28px;
+			    margin: 0;
+			    position: inherit;
+			    line-height: 1.5;
+			    color: #333;
+			    word-wrap: break-word;
+			    word-break: normal;
+            }
+            .article-author {
+	            position: relative;
+			    color: #666;
+			    font-size: 16px;
+			    margin: 20px 0 27px;
+			    span {
+			    	display: inline-block;
+			    	width: 1em;
+			    }
+			    i {
+			    	&.i-normal {
+			    		font-style: normal;
+			    	}
+
+		    		&.i-small {
+				    	font-size: 10px;
+				    }
+			    }
+			    
+            }
+            .article-kind {
+            	height: 21px;
+			    color: #FFFFFF;
+			    font-size: 12px;
+			    background: #2EA1CF;
+			    display: inline-block;
+			    position: relative;
+			    padding: 0 8px;
+			    line-height: 22px;
+            }
+		}
+		.article-content-w {
+			padding-bottom: 20px;
+		}
+	}
+}
+ .linear-b {
+    border-bottom: 1px solid #ececec;
+}

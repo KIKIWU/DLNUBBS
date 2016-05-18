@@ -31,7 +31,8 @@
             * 获取文章列表
             */
             getArticles: {
-                url: 'http://www.dlnubbs.com/web/Artile/getList',
+                // url: 'http://www.dlnubbs.com/web/Artile/getList',
+                url: 'aasss/app/getList',
                 method: 'POST',
             },
             /**
@@ -40,6 +41,11 @@
             getArticleKinds: {
                 url: 'http://www.dlnubbs.com/web/ArtileKind/getKind',
                 method: 'POST',
+            },
+            detail: {
+                // url: 'http://www.dlnubbs.com/web/Artile/detail',
+                url: 'url/web/Artile/detail',
+                method: 'GET',
             }
         });
     }
