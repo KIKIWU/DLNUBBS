@@ -54,7 +54,20 @@
 				name: 'test1',
 				time: '2016年5月17日-19:20',
 				content: '我不知道要评论什么',
-				reply: []
+				reply: [
+				{
+					a: '王玥',
+					b: 'kikiwu',
+					content: '你要上天呀',
+					time: '2016年5月18日-21:21'
+				},
+				{
+					a: '王玥',
+					b: 'kikiwu',
+					content: '你要上天呀',
+					time: '2016年5月18日-21:21'
+				}
+				]
 			},
 			{
 				name: 'test1',

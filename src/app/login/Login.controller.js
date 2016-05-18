@@ -15,6 +15,7 @@
         vm.footerView = '/app/layout/layoutViews/footer.html';
 
         vm.cheacklogin = cheacklogin;
+        vm.href = '#';
         
         activate();
 
@@ -30,9 +31,11 @@
 
                 if(result.code === 200){
                     console.log("登录成功");
+                    vm.href = '/home';
                     
                 }
             });
+            vm.href = '/home';
         }
         function _initialization() {
             var user = {

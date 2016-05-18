@@ -11,7 +11,41 @@
 			<p>{{HomeDetail.article.content}}</p>
 		</div>
 		<div class="article-assue-w">
-			<div class="assue-wrap" ng-repeat="assue in HomeDetail.article.commentes"></div>
+			<div class="assue-wrap linear-b" ng-repeat="assue in HomeDetail.article.commentes">
+				<div class="assue-o">
+				    <div class="assue-author">
+				    	<strong >{{assue.name}}</strong>
+				    	<i class="i-small">{{assue.time}}</i>
+				    </div>
+					<p>{{assue.content}}</p>
+					<div class="rpy-btn-list clearfix">
+						<!-- <i class="i-small">{{assue.time}}</i> -->
+						<ul class="pull-right">
+							<li><i class="fa fa-hand-paper-o fa-lg"></i> </li>
+							<li><i class="fa fa-comment-o fa-lg"></i> </li>
+							<li><i class="fa fa-thumbs-o-up icon-2x" aria-hidden="true"></i> </li>
+						</ul>
+					</div>
+					<div class="rpy-list-w">
+					    <!-- <button class="btn">查看回复</button> -->
+						<!-- <ul class="rpy-list" uib-collapse="HomeDetail.isCollapsed['hotel']"></ul> -->
+						<uib-accordion close-others="oneAtATime">
+							<uib-accordion-group is-open="status.open">
+							    <uib-accordion-heading>
+							        查看回复 <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+							    </uib-accordion-heading>
+							    <ul>
+							    	<li ng-repeat="item in assue.reply">
+							    	<p>{{item.a}} 评论{{item.b}}：{{item.content}}
+							    	</p>
+							    	<i class="i-small">{{item.time}}</i>
+							    	</li>
+							    </ul>
+							</uib-accordion-group>
+						</uib-accordion>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
