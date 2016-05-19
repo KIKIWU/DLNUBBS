@@ -34,13 +34,33 @@
 							    <uib-accordion-heading>
 							        查看回复 <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
 							    </uib-accordion-heading>
-							    <ul>
+							    <ul class="rpy-list">
 							    	<li ng-repeat="item in assue.reply">
-							    	<p>{{item.a}} 评论{{item.b}}：{{item.content}}
-							    	</p>
-							    	<i class="i-small">{{item.time}}</i>
+							    		<div><i class="i-normal">{{item.a}}:
+							    		</i><span> 评论</span><i class="i-normal">{{item.b}}:</i> <span>{{item.content}}</span>
+								    	</div>
+								    	<div class="clearfix">    		
+								    		<span class="pull-right" ng-click="HomeDetail.isCollapsed['rpy'] = false">回复</span>
+								    		<i class="i-small pull-right text-muted">{{item.time}}</i>
+								    	</div>
+							    	
 							    	</li>
 							    </ul>
+							    <div class="set-rpy-w">
+							        <p class="clearfix">
+							        	<button class="rpy-btn-white btn btn-default btn-sm pull-right" ng-click="HomeDetail.isCollapsed['rpy'] = !HomeDetail.isCollapsed['rpy']">我也说一句</button>
+							        </p>
+							    	<div uib-collapse="HomeDetail.isCollapsed['rpy']" data-rr={{HomeDetail.isCollapsed['rpy']}}>
+										<div class="bg-success pdg-div">
+											<textarea></textarea>
+											<p>
+												<button class="btn btn-primary btn-sm pull-right">发表</button>
+											</p>
+
+										</div>
+									</div>
+							    </div>
+							    
 							</uib-accordion-group>
 						</uib-accordion>
 					</div>

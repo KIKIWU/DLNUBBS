@@ -95,6 +95,9 @@
             // });
         }
         function _initialization() {
+        	vm.isCollapsed = {
+        		rpy: true
+        	};
             var user = {
                 name: 'kikiwu' || '游客',
                 level: '11'
