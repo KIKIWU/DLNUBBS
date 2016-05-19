@@ -31,11 +31,10 @@
 
                 if(result.code === 200){
                     console.log("登录成功");
-                    vm.href = '/home';
+                    vm.href = '/#/home';
                     
                 }
             });
-            vm.href = '/home';
         }
         function _initialization() {
             var user = {

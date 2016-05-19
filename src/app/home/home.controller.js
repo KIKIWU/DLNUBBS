@@ -64,44 +64,51 @@
         }
         function getHotArticle(page, limit) {
             var params = {};
-            homeApiService.getArticles(null, params, function(result){
+            params.limit = 7;
+            homeApiService.getHotArticles(null, params, function(result){
 
                 if(result.code === 200){ 
                     var hot = result.data;
                     vm.hot = hot;
+                    angular.forEach(hot, function (item) {
+                        item.url = '/#/detail/' + item.artile_id;
+                    });
                 }
             });
             vm.hot = [{
-                title: '大连民族大学第what届热舞大赛',
-                text: 'balabala',
-                url: 0
+                artile_id: 7154432970570073387,
+                artile_tittle: '大连民族大学第what届热舞大赛',
+                text: 'balabala'
             },{
-                title: '研究生考试报名结束啦',
-                text: 'balabala',
-                url: 2
+                 artile_id: 7154432970570073387,
+                artile_tittle: '研究生考试报名结束啦',
+                text: 'balabala'
             },{
-                title: '大连民族大学第what届热舞大赛',
-                text: 'balabala',
-                url: 1
+                 artile_id: 7154432970570073387,
+                artile_tittle: '大连民族大学第what届热舞大赛',
+                text: 'balabala'
             },{
-                title: '研究生考试报名结束啦',
-                text: 'balabala',
-                url: 2
+                 artile_id: 7154432970570073387,
+                artile_tittle: '研究生考试报名结束啦',
+                text: 'balabala'
             },{
-                title: '发现王国年卡团购开始啦，组团有意的小船说了不翻balabalabala',
-                text: 'balabala',
-                url: 2
+                 artile_id: 7154432970570073387,
+                artile_tittle: '发现王国年卡团购开始啦，组团有意的小船说了不翻balabalabala',
+                text: 'balabala'
             },{
-                title: '发现王国年卡团购开始啦，组团有意的小船说了不翻balabalabala',
-                text: 'balabala',
-                url: 2
+                 artile_id: 7154432970570073387,
+                artile_tittle: '发现王国年卡团购开始啦，组团有意的小船说了不翻balabalabala',
+                text: 'balabala'
             },{
-                title: '盘点民院最美教室',
-                text: 'balabala',
-                url: 3
+                 artile_id: 7154432970570073387,
+                artile_tittle: '盘点民院最美教室',
+                text: 'balabala'
             }];
+            angular.forEach(vm.hot, function (item) {
+                item.url = '/#/detail/' + item.artile_id;
+            });
             vm.employment = [{
-                title: '美团网酒店旅游事业群诚招高级前端开发工程师',
+                tittle: '美团网酒店旅游事业群诚招高级前端开发工程师',
                 author: '吴琪',
                 headimg: '/app/images/home/metuan.png',
                 url: 0
@@ -142,16 +149,16 @@
                 }
             });
             var kinds = [{
-                name: '社区活动'
+                title: '社区活动'
         
             },{
-                name: '考研专区'
+                title: '考研专区'
                
             },{
-                name: '兼职招聘'
+                title: '兼职招聘'
                
             },{
-                name: '校园专栏'
+                title: '校园专栏'
                 
             }];
             vm.kinds = {};

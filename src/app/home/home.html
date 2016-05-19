@@ -45,7 +45,7 @@
                     </div>
                     <div class="hot-article pull-right">
                         <ul>
-                            <li class="article-item" ng-repeat="artice in Home.hot"><a href="artice.url">{{artice.title}}</a></li>
+                            <li class="article-item" ng-repeat="artice in Home.hot"><a href={{artice.url}}>{{artice.artile_tittle}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="article-group-r col-md-6">
                         <div class="article-group"  ng-repeat="kind in Home.kinds.right">
-                            <h4>{{kind.name}}</h4>
+                            <h4>{{kind.title}}</h4>
                             <ul>
                                 <li><a href="">【顺时针车协】第三届公益骑行活动圆满成功</a></li>
                                 <li><a href="">大连高校【最美骑手】活动报名开始了！</a></li>

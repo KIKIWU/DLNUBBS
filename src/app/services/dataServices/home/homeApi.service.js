@@ -42,6 +42,10 @@
                 url: 'http://www.dlnubbs.com/web/ArtileKind/getKind',
                 method: 'POST',
             },
+            getHotArticles: {
+                url: 'http://www.dlnubbs.com/web/ArtileKind/getKind',
+                method: 'POST',
+            },
             detail: {
                 // url: 'http://www.dlnubbs.com/web/Artile/detail',
                 url: 'url/web/Artile/detail',
