@@ -52,38 +52,45 @@
 			vm.article.create_time = '2016年5月17日- 19:00';
 			vm.article.kinName = '校园生活';
 			vm.article.commentes = [
-			{
-				name: 'test1',
-				time: '2016年5月17日-19:20',
-				content: '我不知道要评论什么',
-				reply: [
 				{
-					a: '王玥',
-					b: 'kikiwu',
-					content: '你要上天呀',
-					time: '2016年5月18日-21:21'
+					name: 'test1',
+					time: '2016年5月17日-19:20',
+					content: '我不知道要评论什么',
+					reply: [
+					{
+						a: '王玥',
+						b: 'kikiwu',
+						content: '你要上天呀',
+						time: '2016年5月18日-21:21'
+					},
+					{
+						a: '王玥',
+						b: 'kikiwu',
+						content: '你要上天呀',
+						time: '2016年5月18日-21:21'
+					}
+					]
 				},
 				{
-					a: '王玥',
-					b: 'kikiwu',
-					content: '你要上天呀',
-					time: '2016年5月18日-21:21'
+					name: 'test1',
+					time: '2016年5月17日-19:20',
+					content: '我不知道要评论什么',
+					reply: []
+				},
+				{
+					name: 'test1',
+					time: '2016年5月17日-19:20',
+					content: '我不知道要评论什么',
+					reply: []
 				}
-				]
-			},
-			{
-				name: 'test1',
-				time: '2016年5月17日-19:20',
-				content: '我不知道要评论什么',
-				reply: []
-			},
-			{
-				name: 'test1',
-				time: '2016年5月17日-19:20',
-				content: '我不知道要评论什么',
-				reply: []
-			}
 			];
+			vm.article.commentCount = 3;
+			angular.forEach(vm.article.commentes, function(data,index,array){
+				data.index = index + 1;			
+			});
+			for (var i = 1; i <= vm.article.commentCount; i++) {
+            	vm.isCollapsed['rpy' + i] = true;
+            };
         }
         function cheacklogin() {
             // var copy = angular.copy(vm.user);
@@ -98,13 +105,14 @@
         }
         function _initialization() {
         	vm.isCollapsed = {
-        		rpy: true
         	};
+        	
             var user = {
                 name: 'kikiwu' || '游客',
                 level: '11'
             };
             vm.user = user;
+           
         }
     }
 })();
