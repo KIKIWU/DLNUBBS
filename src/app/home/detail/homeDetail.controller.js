@@ -22,7 +22,9 @@
         vm.id = $stateParams.id;
 
         vm.cheacklogin = cheacklogin;
+        //获取文章数据
         vm.getArticle = getArticle;
+        vm.oprReply = oprReply;
         
         activate();
 
@@ -32,6 +34,27 @@
             _initialization();
             vm.getArticle(vm.id);
         }
+
+        function oprReply(record) {
+            var templateUrl = '/app/home/dialogTemplate/reply.html';
+            var data = {
+                title: '回复评论'               
+            };
+            dialogService.open(templateUrl, data, 'sm', true).result.then(function(data) {
+                var params = {
+                    
+                };
+                homeApiService.reply(params, function(result){
+
+	                if(result.code === 200){
+	                                        
+	                }
+	            });
+
+            });
+
+        }
+       
         function getArticle(id) {
         	console.log(id);
         	var params = {};

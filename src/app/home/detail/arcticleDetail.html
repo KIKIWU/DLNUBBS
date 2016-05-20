@@ -9,6 +9,14 @@
 		</div>
 		<div class="article-content-w linear-b">
 			<p>{{HomeDetail.article.content}}</p>
+			<div class="rpy-btn-list clearfix">
+				<!-- <i class="i-small">{{assue.time}}</i> -->
+				<ul class="pull-right">
+					<li><i class="fa fa-hand-paper-o fa-lg"></i> </li>
+					<li><i class="fa fa-comment-o fa-lg" ng-click="HomeDetail.oprReply(HomeDetail.article)"></i> </li>
+					<li><i class="fa fa-thumbs-o-up icon-2x" aria-hidden="true"></i> </li>
+				</ul>
+			</div>
 		</div>
 		<div class="article-assue-w">
 			<div class="assue-wrap linear-b" ng-repeat="assue in HomeDetail.article.commentes">
@@ -22,13 +30,11 @@
 						<!-- <i class="i-small">{{assue.time}}</i> -->
 						<ul class="pull-right">
 							<li><i class="fa fa-hand-paper-o fa-lg"></i> </li>
-							<li><i class="fa fa-comment-o fa-lg"></i> </li>
+							<li><i class="fa fa-comment-o fa-lg" ng-click="HomeDetail.oprReply(assue)"></i> </li>
 							<li><i class="fa fa-thumbs-o-up icon-2x" aria-hidden="true"></i> </li>
 						</ul>
 					</div>
 					<div class="rpy-list-w">
-					    <!-- <button class="btn">查看回复</button> -->
-						<!-- <ul class="rpy-list" uib-collapse="HomeDetail.isCollapsed['hotel']"></ul> -->
 						<uib-accordion close-others="oneAtATime">
 							<uib-accordion-group is-open="status.open">
 							    <uib-accordion-heading>

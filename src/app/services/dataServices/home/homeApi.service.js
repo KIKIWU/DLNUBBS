@@ -50,6 +50,10 @@
                 // url: 'http://www.dlnubbs.com/web/Artile/detail',
                 url: 'url/web/Artile/detail',
                 method: 'GET',
+            },
+            reply: {
+                url: 'url/web/Artile/reply',
+                method: 'GET'
             }
         });
     }
