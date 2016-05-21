@@ -16,15 +16,9 @@
         </div>
     </header>
     <div class="content-layout">
-        <div class="login-layout">
-            <div class="login-text center-block">
-                <h2>现在加入大连民族大学论坛，加入讨论吧</h2>
-                <ul class="">
-                    <li class=""><a href="#/login" class="btn-common">登录</a></li>
-                    <li class=""><a href="#/register" class="btn-common">注册</a></li>
-                </ul> 
-            </div>
-            
+        <div ng-include src="Home.noUserView" ng-if="!Home.loginType" class="login-layout"></div>         
+        <div class="checkView" ng-if="Home.loginType">         
+             
         </div>
         <div class="content center-block clearfix">
             <div class="main pull-left">

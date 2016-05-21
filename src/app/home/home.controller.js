@@ -19,16 +19,31 @@
         var _initialization = _initialization;
         vm.getHotArticle = getHotArticle;
         vm.getArticleKinds = getArticleKinds;
+        vm.checkLogin = checkLogin;
         vm.footerView = '/app/layout/layoutViews/footer.html';
+        vm.noUserView = 'app/home/Views/noUserView.html';
         
         activate();
 
         function activate() {
             _initialization();
+            vm.checkLogin();
             vm.getHotArticle();
             vm.getArticleKinds();
         }
+        function checkLogin() {
+
+            var user = {
+                name: 'kikiwu' || '游客',
+                level: '11'
+            };
+            vm.user = user;
+            if(vm.user.name !== '游客') {
+                vm.loginType = true;
+            }
+        }
         function _initialization() {
+            vm.loginType = false;
             vm.carousel = {
                 myInterval: 5000,
                 noWrapSlides: false,
@@ -60,6 +75,7 @@
                     id: 5
                 }]
             };
+            
 
         }
         function getHotArticle(page, limit) {
