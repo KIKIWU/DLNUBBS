@@ -14,7 +14,7 @@
 				<ul class="pull-right">
 					<li><i class="fa fa-hand-paper-o fa-lg"></i> </li>
 					<li><i class="fa fa-comment-o fa-lg" ng-click="HomeDetail.oprReply(HomeDetail.article)"></i> </li>
-					<li><i class="fa fa-thumbs-o-up icon-2x" aria-hidden="true"></i> </li>
+					<li><i class="fa icon-2x" aria-hidden="true" ng-class="{true:'fa-thumbs-up',false:'fa-thumbs-o-up'}[HomeDetail.likeIcon0]" ng-click="HomeDetail.oprLike(0)"></i> </li>
 				</ul>
 			</div>
 		</div>
@@ -31,7 +31,7 @@
 						<ul class="pull-right">
 							<li><i class="fa fa-hand-paper-o fa-lg"></i> </li>
 							<li><i class="fa fa-comment-o fa-lg" ng-click="HomeDetail.oprReply(assue)"></i> </li>
-							<li><i class="fa fa-thumbs-o-up icon-2x" aria-hidden="true"></i> </li>
+							<li><i class="fa icon-2x" aria-hidden="true" ng-class="{true:'fa-thumbs-up',false:'fa-thumbs-o-up'}[HomeDetail['likeIcon' + assue.index]]" ng-click="HomeDetail.oprLike(assue.index)"></i> </li>
 						</ul>
 					</div>
 					<div class="rpy-list-w">

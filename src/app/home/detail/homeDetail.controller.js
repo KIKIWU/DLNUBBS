@@ -25,6 +25,8 @@
         //获取文章数据
         vm.getArticle = getArticle;
         vm.oprReply = oprReply;
+        vm.oprLike = oprLike;
+        vm.oprTipOff = oprTipOff;
         
         activate();
 
@@ -38,7 +40,8 @@
         function oprReply(record) {
             var templateUrl = '/app/home/dialogTemplate/reply.html';
             var data = {
-                title: '回复评论'               
+                title: '回复评论',
+                content: ''               
             };
             dialogService.open(templateUrl, data, 'sm', true).result.then(function(data) {
                 var params = {
@@ -54,7 +57,11 @@
             });
 
         }
-       
+        function oprLike(index) {
+        	vm['likeIcon' + index] = !vm['likeIcon' + index];
+        }
+        function oprTipOff() {}
+
         function getArticle(id) {
         	console.log(id);
         	var params = {};
@@ -113,7 +120,9 @@
 			});
 			for (var i = 1; i <= vm.article.commentCount; i++) {
             	vm.isCollapsed['rpy' + i] = true;
+            	vm['likeIcon' + i] = false;
             };
+            vm.likeIcon0 = false;
         }
         function cheacklogin() {
             // var copy = angular.copy(vm.user);
