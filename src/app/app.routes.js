@@ -27,6 +27,12 @@
                 controller: 'HomeDetailController',
                 controllerAs: 'HomeDetail'
             })
+            .state('classify', {
+                url: '/classify/:id',
+                templateUrl: '/app/home/classify/classify.html',
+                controller: 'HomeClassifyController',
+                controllerAs: 'HomeClassify'
+            })
             
             .state('login', {
                 url: '/login',

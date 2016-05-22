@@ -156,6 +156,7 @@
 
                 if(result.code === 200){ 
                     var kinds = result.data;
+                    vm.articleKinds = angular.copy(kinds);
                     vm.kinds = {};
                     var right = angular.copy(kinds);
                     var number = Math.ceil(kinds.length/2);
@@ -165,19 +166,24 @@
                 }
             });
             var kinds = [{
-                title: '社区活动'
+                title: '社区活动',
+                id: 7153878608468772100
         
             },{
-                title: '考研专区'
+                title: '考研专区',
+                id: 7153878608468772100
                
             },{
-                title: '兼职招聘'
+                title: '兼职招聘',
+                id: 7153878608468772100
                
             },{
-                title: '校园专栏'
+                title: '校园专栏',
+                id: 7153878608468772100
                 
             }];
             vm.kinds = {};
+            vm.articleKinds = angular.copy(kinds);
             var right = angular.copy(kinds);
             
             var number = Math.ceil(kinds.length/2);
