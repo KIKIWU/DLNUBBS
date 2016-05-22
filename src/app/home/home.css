@@ -71,7 +71,14 @@ h4 {
       font-size: 24px;
       font-family: sans-serif,'Museo Sans', 'Museo'; }
     .container header .sub-nav-wrap {
-      width: 1100px; }
+      width: 1100px;
+      position: relative; }
+      .container header .sub-nav-wrap .userMesssage {
+        position: absolute;
+        right: 0px;
+        bottom: 0px; }
+        .container header .sub-nav-wrap .userMesssage label {
+          font-weight: normal; }
     .container header .sub-nav {
       display: inline-block; }
       .container header .sub-nav li {

@@ -81,6 +81,15 @@ h4 {
 	    }
 	    .sub-nav-wrap {
 	    	width: 1100px;
+	    	position: relative;
+	    	.userMesssage {
+            	position: absolute;
+            	right: 0px;
+            	bottom: 0px;
+            	label {
+            		font-weight: normal;
+            	}
+            }
 	    }
 	    .sub-nav {
 	    	display: inline-block;
