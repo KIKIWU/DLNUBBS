@@ -54,6 +54,10 @@
             reply: {
                 url: 'url/web/Artile/reply',
                 method: 'GET'
+            },
+            getArticleByKind: {
+                url: 'url/web/Artile/detail',
+                method: 'GET'
             }
         });
     }
