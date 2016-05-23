@@ -1,1 +1,47 @@
-classify.html
+
+<div class="headerView detailHeader">
+	<div class="linear-wp"></div>
+<div class="header">
+    <div class="header-wp-b">
+    	<div class="center-block header-content">
+			<h3 class="logo">DLNUBBS</h3>
+			<ul class="sub-nav">
+                <li ng-repeat="kind in HomeClassify.Kinds"><a href="{{'/#/classify/' + kind.id}}" ng-class="{active: HomeClassify.kindId === kind.id}">{{kind.title}}</a></li>
+                <li><a href="">游戏联盟</a></li>
+            </ul>
+			<div class="userMesssage">
+				<label>你好：
+					<a href="">{{HomeDetail.user.name}}</a>
+				</label>
+				<label>等级：
+					<a href="">{{HomeDetail.user.level}}</a>
+				</label>
+
+			</div>
+		</div>
+    </div>
+	
+</div>
+</div>
+
+<!-- <div class="container">
+	<header class="header">
+    	<div class="linear-wp"></div>
+        <div class="center-block sub-nav-wrap">
+            <span class="logo">DLNUBBS</span>
+            <ul class="sub-nav">
+                <li ng-repeat="kind in HomeClassify.Kinds"><a href="{{'/#/classify/' + kind.id}}">{{kind.title}}</a></li>
+                <li><a href="">游戏联盟</a></li>
+            </ul>
+            <div class="userMesssage">
+                <label>你好：
+                    <a href="">{{HomeClassify.user.name}}</a>
+                </label>
+                <label>等级：
+                    <a href="">{{HomeClassify.user.level}}</a>
+                </label>
+
+            </div>
+        </div>
+    </header>
+</div> -->
