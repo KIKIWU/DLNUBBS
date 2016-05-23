@@ -1,7 +1,7 @@
 
 <div class="headerView detailHeader">
 	<div class="linear-wp"></div>
-	<div class="header">
+	<div class="header header-sp">
 	    <div class="header-wp-b">
 	    	<div class="center-block header-content">
 				<h3 class="logo">DLNUBBS</h3>
@@ -11,10 +11,10 @@
 	            </ul>
 				<div class="userMesssage">
 					<label>你好：
-						<a href="">{{HomeDetail.user.name}}</a>
+						<a href="">{{HomeClassify.user.name}}</a>
 					</label>
 					<label>等级：
-						<a href="">{{HomeDetail.user.level}}</a>
+						<a href="">{{HomeClassify.user.level}}</a>
 					</label>
 
 				</div>
@@ -22,11 +22,31 @@
 	    </div>	
 	</div>
 </div>
-<div class="detail-layout center-block">
-	<ul>
-		<li ng-repeat="article in HomeClassify.articles">
-			<a href="/#/detail/{{article.id}}">{{article.tittle}}</a>
-		</li>
-	</ul>
+<div class="b-wrap">
+	<div class="detail-layout center-block">
+		<ul class="main-wrap clearfix">
+			<li ng-repeat="article in HomeClassify.articles">
+			    <div class="badge-w">
+			    	<span class="badge">{{article.agree_count}}</span>
+			    </div>
+			    <div class="article-info">
+			    	<div class="title-info">
+						<a href="/#/detail/{{article.id}}">{{article.tittle}}</a>
+						<div class="user-author">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							<span>{{article.author}}</span>
+						</div>
+					
+					</div>
+					<div class="content-info">
+						<p>{{article.content}}</p>
+						<i class="i-small">{{article.create_time}}</i>
+					</div>
+			    </div>
+			
+			</li>
+		</ul>
+	</div>
+	<div ng-include src="HomeClassify.footerView" class="detailFooterView center-block"></div>
 </div>
-<div ng-include src="HomeClassify.footerView" class="detailFooterView center-block"></div>
+

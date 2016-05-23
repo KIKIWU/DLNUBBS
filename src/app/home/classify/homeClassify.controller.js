@@ -86,7 +86,8 @@
 					content: '5月12日晚8点，方励开始在自己的微博上直播与《百鸟朝凤》宣发相关的辛酸和感悟',
 					author: 'kikiwu',
 					create_time: '2016年5月17日- 19:00',
-					kinName: '校园生活'
+					kinName: '校园生活',
+					agree_count: 22
 	            },
 	            {
 	            	id: 1283,
@@ -94,7 +95,8 @@
 					content: '5月12日晚8点，方励开始在自己的微博上直播与《百鸟朝凤》宣发相关的辛酸和感悟',
 					author: 'kikiwu',
 					create_time: '2016年5月17日- 19:00',
-					kinName: '校园生活'
+					kinName: '校园生活',
+					agree_count: 22
 	            },
 	            {
 	            	id: 1111,
@@ -102,14 +104,16 @@
 					content: '5月12日晚8点，方励开始在自己的微博上直播与《百鸟朝凤》宣发相关的辛酸和感悟',
 					author: 'kikiwu',
 					create_time: '2016年5月17日- 19:00',
-					kinName: '校园生活'
+					kinName: '校园生活',
+					agree_count: 38
 	            },
 	            {
 					tittle: '这是一个测试数据的文章标题',
 					content: '5月12日晚8点，方励开始在自己的微博上直播与《百鸟朝凤》宣发相关的辛酸和感悟',
 					author: 'kikiwu',
 					create_time: '2016年5月17日- 19:00',
-					kinName: '校园生活'
+					kinName: '校园生活',
+					agree_count: 22
 	            },
 	            {
 					tittle: '这是一个测试数据的文章标题',
