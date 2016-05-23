@@ -24,6 +24,7 @@
 
         vm.cheacklogin = cheacklogin;
         vm.getArticleKinds = getArticleKinds;
+        vm.page = 1;
         //获取文章数据
         vm.getArticleByKind = getArticleByKind;
         
@@ -35,7 +36,7 @@
         function activate() {
             _initialization();
             vm.getArticleKinds();
-            vm.getArticleByKind(vm.kindId);
+            vm.getArticleByKind(vm.kindId, vm.page);
         }
 
         function getArticleKinds() {
@@ -67,16 +68,21 @@
             vm.Kinds = kinds; 
         }
 
-        function getArticleByKind(id) {
+        function getArticleByKind(id, page) {
         	var params = {};
         	params.id = id;
         	params.limit = 20;
-        	params.page = 1;
+        	params.page = page || 1;
         	homeApiService.getArticleByKind(params, function(result){
 
                 if(result.code === 200){
                     var articles = result.data;
-                    vm.articles = articles;                
+                    vm.articles = articles; 
+                    var totalItems = result.data.TOTAL_COUNT;
+
+                    vm.pager = {
+                        totalItems: totalItems
+                    };               
                 }
             });
             vm.articles = [
@@ -165,6 +171,11 @@
 					kinName: '校园生活'
 	            }
             ];
+            var totalItems = 88;
+
+            vm.pager = {
+                totalItems: totalItems
+            };  
         }
         function cheacklogin() {
             // var copy = angular.copy(vm.user);

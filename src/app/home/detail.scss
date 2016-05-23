@@ -203,60 +203,71 @@ i {
 	width: 100%;
 	background-color: #E2E2E2;
 	padding-top: 20px;
-}
-.main-wrap {
-	
-	background-color: #fff;
-	li {
-		margin: 20px 20px 20px 20px;
-		border-bottom: 1px solid #ececec;
-		// overflow: hidden;
-		float: left;
-		width: 100%;
-		.badge-w {
-			position: absolute;
-			display: inline-block;
-			width: 70px;
-		}
-		.article-info {
-			margin-left: 70px;
-			.title-info {
-				width: 700px;
-				margin-bottom: 15px;
-				a {
-					font-size: 14px;
-				    overflow: hidden;
-				    text-overflow: ellipsis;
-				    white-space: nowrap;
-				    vertical-align: middle;
-				}
-				.user-author {
+	.main-wrap {
+		background-color: #fff;
+		& > ul {
+			background-color: #fff;
+			li {
+				margin: 20px 20px 20px 20px;
+				border-bottom: 1px solid #ececec;
+				// overflow: hidden;
+				float: left;
+				width: 100%;
+				.badge-w {
+					position: absolute;
 					display: inline-block;
-					float: right;
-					width: 165px;
-					i {
-						margin-right: 5px;
+					width: 70px;
+				}
+				.article-info {
+					margin-left: 70px;
+					.title-info {
+						width: 700px;
+						margin-bottom: 15px;
+						a {
+							font-size: 14px;
+						    overflow: hidden;
+						    text-overflow: ellipsis;
+						    white-space: nowrap;
+						    vertical-align: middle;
+						}
+						.user-author {
+							display: inline-block;
+							float: right;
+							width: 165px;
+							i {
+								margin-right: 5px;
+							}
+						}		
 					}
-				}		
-			}
-			.content-info {
-				width: 700px;
-				p {
-					display: inline-block;
-					width: 300px;
-					overflow: hidden;
-				    text-overflow: ellipsis;
-				    white-space: nowrap;
-				    vertical-align: middle;
+					.content-info {
+						width: 700px;
+						p {
+							display: inline-block;
+							width: 300px;
+							overflow: hidden;
+						    text-overflow: ellipsis;
+						    white-space: nowrap;
+						    vertical-align: middle;
+						}
+						i {
+							display: inline-block;
+							width: 165px;
+							float: right;
+						}
+					}
 				}
-				i {
-					display: inline-block;
-					width: 165px;
-					float: right;
-				}
+
 			}
 		}
-
+		.pagination-w {
+			text-align: center;
+			ul {
+				margin: 0 auto;
+			}
+		}
 	}
+	
 }
+
+
 

@@ -24,28 +24,33 @@
 </div>
 <div class="b-wrap">
 	<div class="detail-layout center-block">
-		<ul class="main-wrap clearfix">
-			<li ng-repeat="article in HomeClassify.articles">
-			    <div class="badge-w">
-			    	<span class="badge">{{article.agree_count}}</span>
-			    </div>
-			    <div class="article-info">
-			    	<div class="title-info">
-						<a href="/#/detail/{{article.id}}">{{article.tittle}}</a>
-						<div class="user-author">
-							<i class="fa fa-user" aria-hidden="true"></i>
-							<span>{{article.author}}</span>
+		<div class="main-wrap">
+			<ul class="clearfix">
+				<li ng-repeat="article in HomeClassify.articles">
+				    <div class="badge-w">
+				    	<span class="badge">{{article.agree_count}}</span>
+				    </div>
+				    <div class="article-info">
+				    	<div class="title-info">
+							<a href="/#/detail/{{article.id}}">{{article.tittle}}</a>
+							<div class="user-author">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								<span>{{article.author}}</span>
+							</div>
+						
 						</div>
-					
-					</div>
-					<div class="content-info">
-						<p>{{article.content}}</p>
-						<i class="i-small">{{article.create_time}}</i>
-					</div>
-			    </div>
-			
-			</li>
-		</ul>
+						<div class="content-info">
+							<p>{{article.content}}</p>
+							<i class="i-small">{{article.create_time}}</i>
+						</div>
+				    </div>
+				
+				</li>
+			</ul>
+			<div class="pagination-w">
+				<uib-pagination ng-show="HomeClassify.pager.totalItems > 20" total-items="HomeClassify.pager.totalItems" ng-model="HomeClassify.page" items-per-page="20" ng-change="HomeClassify.getArticleByKind(HomeClassify.kindId,HomeClassify.page)" previous-text="上一页" next-text="下一页" first-text="首页" last-text="尾页" max-size="5" boundary-links="true" rotate="false"></uib-pagination>
+			</div>
+		</div>	
 	</div>
 	<div ng-include src="HomeClassify.footerView" class="detailFooterView center-block"></div>
 </div>
