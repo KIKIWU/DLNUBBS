@@ -233,11 +233,27 @@ i {
 				.user-author {
 					display: inline-block;
 					float: right;
+					width: 165px;
 					i {
 						margin-right: 5px;
 					}
+				}		
+			}
+			.content-info {
+				width: 700px;
+				p {
+					display: inline-block;
+					width: 300px;
+					overflow: hidden;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+				    vertical-align: middle;
 				}
-				
+				i {
+					display: inline-block;
+					width: 165px;
+					float: right;
+				}
 			}
 		}
 
