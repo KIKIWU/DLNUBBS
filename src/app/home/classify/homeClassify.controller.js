@@ -75,8 +75,8 @@
         	var params = {};
         	params.kind = id;
         	params.limit = 20;
-        	// params.pagesize = page || 1;
-        	homeApiService.getArticleByKind({page: page || 1}, params, function(result){
+        	params.page = page || 1;
+        	homeApiService.getArticleByKind(params, function(result){
 
                 if(result.code == 200){
                     var articles = result.data;
