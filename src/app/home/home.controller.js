@@ -31,7 +31,7 @@
             vm.checkLogin();
             vm.getHotArticle();
             vm.getArticleKinds();
-            vm.getdetail();
+            
         }
         function checkLogin() {
 
@@ -91,10 +91,10 @@
                     if(result.code === 200){ 
                         var artilesbyKind = result.data;
                         vm.artilesbyKind[item.id] = artilesbyKind;
-                        angular.forEach(artilesbyKind[item.id], function (item) {
-                            item.url = '/#/detail/' + item.artile_id;
-                        });
-                        console.log(vm.artilesbyKind[item.id]);
+                        // angular.forEach(artilesbyKind[item.id], function (item) {
+                        //     item.url = '/#/detail/' + item.artile_id;
+                        // });
+                        // console.log(vm.artilesbyKind[item.id]);
                     }
                 });
             });
@@ -153,6 +153,7 @@
                     vm.kinds.left = kinds.splice(0, number);
                     console.log(right + '-' + number);
                     vm.kinds.right = right.splice(number, right.length);
+                    vm.getdetail();
                 }
             });
             // var kinds = [{

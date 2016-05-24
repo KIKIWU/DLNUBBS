@@ -56,7 +56,7 @@
                         <div class="article-group" ng-repeat="kind in Home.kinds.left">
                             <h4>{{kind.tittle}}</h4>
                             <ul>
-                                <li ng-repeat="record in Home.artilesbyKind[kind.id]"><a href="{{record.url}}">record.artile_tittle</a></li>
+                                <li ng-repeat="record in Home.artilesbyKind[kind.id]"><a href="/#/detail/{{record.artile_id}}">{{record.artile_tittle}}</a></li>
                                 
                             </ul>
                         </div>
@@ -66,7 +66,7 @@
                         <div class="article-group"  ng-repeat="kind in Home.kinds.right">
                             <h4>{{kind.tittle}}</h4>
                             <ul>
-                                <li ng-repeat="record in Home.artilesbyKind[kind.id]"><a href="{{record.url}}">record.artile_tittle</a></li>
+                                <li ng-repeat="record in Home.artilesbyKind[kind.id]"><a href="/#/detail/{{record.artile_id}}">{{record.artile_tittle}}</a></li>
                             </ul>
                         </div>
                        
