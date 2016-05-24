@@ -20,6 +20,7 @@
         vm.getHotArticle = getHotArticle;
         vm.getArticleKinds = getArticleKinds;
         vm.checkLogin = checkLogin;
+        vm.getdetail = getdetail;
         vm.footerView = '/app/layout/layoutViews/footer.html';
         vm.noUserView = 'app/home/Views/noUserView.html';
         
@@ -30,6 +31,7 @@
             vm.checkLogin();
             vm.getHotArticle();
             vm.getArticleKinds();
+            vm.getdetail();
         }
         function checkLogin() {
 
@@ -78,6 +80,26 @@
             
 
         }
+        function getdetail() {
+            var params = {};
+            vm.artilesbyKind = {};
+            angular.forEach(vm.articleKinds, function (item) {
+                params.limit = 6;
+                params.kind = item.id;
+                homeApiService.getHotArticles(null, params, function(result){
+
+                    if(result.code === 200){ 
+                        var artilesbyKind = result.data;
+                        vm.artilesbyKind[item.id] = artilesbyKind;
+                        angular.forEach(artilesbyKind[item.id], function (item) {
+                            item.url = '/#/detail/' + item.artile_id;
+                        });
+                        console.log(vm.artilesbyKind[item.id]);
+                    }
+                });
+            });
+            
+        }
         function getHotArticle(page, limit) {
             var params = {};
             params.limit = 7;
@@ -90,38 +112,6 @@
                         item.url = '/#/detail/' + item.artile_id;
                     });
                 }
-            });
-            vm.hot = [{
-                artile_id: 7154432970570073387,
-                artile_tittle: '大连民族大学第what届热舞大赛',
-                text: 'balabala'
-            },{
-                 artile_id: 7154432970570073387,
-                artile_tittle: '研究生考试报名结束啦',
-                text: 'balabala'
-            },{
-                 artile_id: 7154432970570073387,
-                artile_tittle: '大连民族大学第what届热舞大赛',
-                text: 'balabala'
-            },{
-                 artile_id: 7154432970570073387,
-                artile_tittle: '研究生考试报名结束啦',
-                text: 'balabala'
-            },{
-                 artile_id: 7154432970570073387,
-                artile_tittle: '发现王国年卡团购开始啦，组团有意的小船说了不翻balabalabala',
-                text: 'balabala'
-            },{
-                 artile_id: 7154432970570073387,
-                artile_tittle: '发现王国年卡团购开始啦，组团有意的小船说了不翻balabalabala',
-                text: 'balabala'
-            },{
-                 artile_id: 7154432970570073387,
-                artile_tittle: '盘点民院最美教室',
-                text: 'balabala'
-            }];
-            angular.forEach(vm.hot, function (item) {
-                item.url = '/#/detail/' + item.artile_id;
             });
             vm.employment = [{
                 tittle: '美团网酒店旅游事业群诚招高级前端开发工程师',
@@ -165,31 +155,31 @@
                     vm.kinds.right = right.splice(number, right.length);
                 }
             });
-            var kinds = [{
-                title: '社区活动',
-                id: 7
+            // var kinds = [{
+            //     title: '社区活动',
+            //     id: 7
         
-            },{
-                title: '考研专区',
-                id: 2100
+            // },{
+            //     title: '考研专区',
+            //     id: 2100
                
-            },{
-                title: '兼职招聘',
-                id: 387
+            // },{
+            //     title: '兼职招聘',
+            //     id: 387
                
-            },{
-                title: '校园专栏',
-                id: 786
+            // },{
+            //     title: '校园专栏',
+            //     id: 786
                 
-            }];
-            vm.kinds = {};
-            vm.articleKinds = angular.copy(kinds);
-            var right = angular.copy(kinds);
+            // }];
+            // vm.kinds = {};
+            // vm.articleKinds = angular.copy(kinds);
+            // var right = angular.copy(kinds);
             
-            var number = Math.ceil(kinds.length/2);
-            vm.kinds.left = kinds.splice(0, number);
-            vm.kinds.right = right.splice(number, right.length);
-            console.log(vm.kinds);
+            // var number = Math.ceil(kinds.length/2);
+            // vm.kinds.left = kinds.splice(0, number);
+            // vm.kinds.right = right.splice(number, right.length);
+            // console.log(vm.kinds);
         }
 
 

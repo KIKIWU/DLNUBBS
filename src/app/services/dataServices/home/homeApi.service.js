@@ -43,12 +43,12 @@
                 method: 'POST',
             },
             getHotArticles: {
-                url: 'http://www.dlnubbs.com/web/ArtileKind/getKind',
+                url: 'http://www.dlnubbs.com/web/index/getHotArtile',
                 method: 'POST',
             },
             detail: {
-                // url: 'http://www.dlnubbs.com/web/Artile/detail',
-                url: 'url/web/Artile/detail',
+                url: 'http://www.dlnubbs.com/web/Artile/detail',
+                // url: 'url/web/Artile/detail',
                 method: 'GET',
             },
             reply: {

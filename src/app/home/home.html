@@ -6,7 +6,7 @@
         <div class="center-block sub-nav-wrap">
             <span class="logo">DLNUBBS</span>
             <ul class="sub-nav">
-                <li ng-repeat="kind in Home.articleKinds"><a href="{{'/#/classify/' + kind.id}}">{{kind.title}}</a></li>
+                <li ng-repeat="kind in Home.articleKinds"><a href="{{'/#/classify/' + kind.id}}">{{kind.tittle}}</a></li>
                 <li><a href="">游戏联盟</a></li>
             </ul>
             <div class="userMesssage">
@@ -54,47 +54,22 @@
                 <div class="group-wrap clearfix">
                     <div class="article-group-l col-md-6">
                         <div class="article-group" ng-repeat="kind in Home.kinds.left">
-                            <h4>{{kind.title}}</h4>
+                            <h4>{{kind.tittle}}</h4>
                             <ul>
-                                <li><a href="">劲爆的国际音乐节马上就要来了。听惯了吉他的声音，是否想过来听听贝斯的声音？</a></li>
-                                <li>
-                                    <a href="">【开发区】有没有选 微生物学 公选课的同学</a>
-                                </li>
-                                <li><a href="">给大家讲一个我的故事吧，现在回想起来就当是个乐吧</a></li>
-                                <li><a href="">你好，陌生人，我们一起来写集体日记吧</a></li>
-                                <!-- <li ng-repeat= ""></li> -->
+                                <li ng-repeat="record in Home.artilesbyKind[kind.id]"><a href="{{record.url}}">record.artile_tittle</a></li>
+                                
                             </ul>
                         </div>
-                        <!-- <div class="article-group">
-                            <h4>考研专区</h4>
-                            <ul>
-                                <li><a href="">【建筑考研】哈工大建筑学考研经验</a></li>
-                                <li><a href="">大连理工建筑学考研路！希望对大家有帮助！</a></li>
-                                <li><a href="">开发区求考研合租室友嘤嘤嘤！！</a></li>
-                                <li><a href="">学姐出售考研工具书</a></li>
-                            </ul>
-                        </div> -->
+                    
                     </div>
                     <div class="article-group-r col-md-6">
                         <div class="article-group"  ng-repeat="kind in Home.kinds.right">
-                            <h4>{{kind.title}}</h4>
+                            <h4>{{kind.tittle}}</h4>
                             <ul>
-                                <li><a href="">【顺时针车协】第三届公益骑行活动圆满成功</a></li>
-                                <li><a href="">大连高校【最美骑手】活动报名开始了！</a></li>
-                                <li><a href="">大连民族大学国旗护卫队纳新预备役啦</a></li>
-                                <li><a href="">【星海剧社纳新】我们在星海等你~~</a></li>
-                                <li><a href="">【唱响团】 “我是歌手”演唱会重磅来袭！！</a></li>
+                                <li ng-repeat="record in Home.artilesbyKind[kind.id]"><a href="{{record.url}}">record.artile_tittle</a></li>
                             </ul>
                         </div>
-                       <!--  <div class="article-group">
-                            <h4>兼职招聘</h4>
-                            <ul>
-                                <li><a href="">『四月兼职贴』二手/兼职/广告/交易信息统一归纳贴</a></li>
-                                <li><a href="">『三月兼职贴』交易信息统一归纳贴</a></li>
-                                <li><a href="">开发区麦凯乐一层促销活动时薪</a></li>
-                                <li><a href="">发现王国售货员招兼职啦</a></li>
-                            </ul>
-                        </div> -->
+                       
                     </div>
                 </div>
             </div>
