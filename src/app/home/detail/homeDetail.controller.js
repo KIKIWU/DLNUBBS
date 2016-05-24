@@ -52,7 +52,8 @@
                         title: '回复成功',
                         message: result.msg
                     };
-                    dialogService.alert(tips);                  
+                    dialogService.alert(tips); 
+                    vm.getArticle(vm.id);                 
                 }
             });
         }
