@@ -191,11 +191,6 @@
         	vm.isCollapsed = {
         	};
         	vm.commentContent = '';
-            var user = {
-                name: 'kikiwu' || '游客',
-                level: '11'
-            };
-            vm.user = user;
            
         }
     }

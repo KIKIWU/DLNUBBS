@@ -189,9 +189,9 @@
                     var user = result.data.name;
            
 		            vm.user = user;
-		            if(!vm.user.name) {
+		            if(!vm.user) {
 		            	vm.log = false;
-		            	vm.user.name = '游客';
+		            	vm.user = '游客';
 		            }
                     
                 }
