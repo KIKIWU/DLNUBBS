@@ -42,12 +42,12 @@
 							    </uib-accordion-heading>
 							    <ul class="rpy-list">
 							    	<li ng-repeat="item in assue.reply">
-							    		<div><i class="i-normal">{{item.a}}:
-							    		</i><span> 评论</span><i class="i-normal">{{item.b}}:</i> <span>{{item.content}}</span>
+							    		<div><i class="i-normal">{{item.replyAuthor}}:
+							    		</i><span> 评论</span><i class="i-normal">{{item.author}}:</i> <span>{{item.content}}</span>
 								    	</div>
 								    	<div class="clearfix">    		
 								    		<span class="pull-right" ng-click="HomeDetail.isCollapsed['rpy' + assue.index] = false">回复</span>
-								    		<i class="i-small pull-right text-muted">{{item.time}}</i>
+								    		<i class="i-small pull-right text-muted">{{item.create_time}}</i>
 								    	</div>
 							    	
 							    	</li>
