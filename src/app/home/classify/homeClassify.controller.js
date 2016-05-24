@@ -35,13 +35,14 @@
 
         function activate() {
             _initialization();
+            vm.cheacklogin();
             vm.getArticleKinds();
             vm.getArticleByKind(vm.kindId, vm.page);
         }
 
         function getArticleKinds() {
             var params = {};
-            homeApiService.getArticleKinds(null, params, function(result){
+            homeApiService.getArticleKinds(params, function(result){
 
                 if(result.code == 200){ 
                     var kinds = result.data;
@@ -75,7 +76,7 @@
         	params.kind = id;
         	params.limit = 20;
         	params.page = page || 1;
-        	homeApiService.getArticleByKind(null, params, function(result){
+        	homeApiService.getArticleByKind(params, function(result){
 
                 if(result.code == 200){
                     var articles = result.data;
@@ -89,7 +90,7 @@
             });
      //        vm.articles = [
 	    //         {
-	    //         	id: 3283,
+	    //         	   id: 3283,
 					// tittle: '这是一个测试数据的文章标题',
 					// content: '5月12日晚8点，方励开始在自己的微博上直播与《百鸟朝凤》宣发相关的辛酸和感悟',
 					// author: 'kikiwu',
@@ -182,24 +183,23 @@
         function cheacklogin() {
             // var copy = angular.copy(vm.user);
             // copy.requestTime = new Date().getTime();
-            // homeApiService.login(null, copy, function(result){
+            homeApiService.user(null, {}, function(result){
 
-            //     if(result.code === 200){
-            //         console.log("登录成功");
+                if(result.code === 200){
+                    var user = result.data.name;
+           
+		            vm.user = user;
+		            if(!vm.user.name) {
+		            	vm.log = false;
+		            	vm.user.name = '游客';
+		            }
                     
-            //     }
-            // });
+                }
+            });
         }
         function _initialization() {
         	vm.isCollapsed = {
         	};
-        	
-            var user = {
-                name: 'kikiwu' || '游客',
-                level: '11'
-            };
-            vm.user = user;
-           
         }
     }
 })();

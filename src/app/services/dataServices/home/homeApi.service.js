@@ -27,6 +27,10 @@
                 url: 'http://www.dlnubbs.com/web/Auth/register',
                 method: 'POST',
             },
+            user: {
+                url: 'http://www.dlnubbs.com/web/Auth/getUserInfo',
+                method: 'POST',
+            },
             /**
             * 获取文章列表
             */
