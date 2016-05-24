@@ -87,8 +87,8 @@
         	params.id = id;
         	homeApiService.detail(params, function(result){
 
-                if(result.code === 200){
-                    console.log("登录成功");
+                if(result.code == 200){
+                    // console.log("登录成功");
                     var article = result.data;
                     vm.article = article;
                     angular.forEach(vm.article.commentes, function(data,index,array){

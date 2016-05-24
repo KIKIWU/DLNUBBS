@@ -53,11 +53,11 @@
             },
             reply: {
                 url: 'http://www.dlnubbs.com/web/Artile/replyTo',
-                method: 'GET'
+                method: 'POST'
             },
             getArticleByKind: {
                 url: 'http://www.dlnubbs.com/web/Artile/detail',
-                method: 'GET'
+                method: 'POST'
             }
         });
     }
