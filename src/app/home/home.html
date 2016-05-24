@@ -9,12 +9,9 @@
                 <li ng-repeat="kind in Home.articleKinds"><a href="{{'/#/classify/' + kind.id}}">{{kind.tittle}}</a></li>
                 <li><a href="">游戏联盟</a></li>
             </ul>
-            <div class="userMesssage">
+            <div class="userMesssage" ng-if="Home.log">
                 <label>你好：
-                    <a href="">{{Home.user.name}}</a>
-                </label>
-                <label>等级：
-                    <a href="">{{Home.user.level}}</a>
+                    <a href="">{{Home.user}}</a>
                 </label>
 
             </div>

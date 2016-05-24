@@ -35,14 +35,19 @@
         }
         function checkLogin() {
 
-            var user = {
-                name: 'kikiwu' || '游客',
-                level: '11'
-            };
-            vm.user = user;
-            if(vm.user.name !== '游客') {
-                vm.loginType = true;
-            }
+             homeApiService.user(null, {}, function(result){
+
+                if(result.code === 200){
+                    var user = result.data.name;
+           
+                    vm.user = user;
+                    if(!vm.user) {
+                        vm.log = false;
+                        vm.user = '游客';
+                    }
+                    
+                }
+            });
         }
         function _initialization() {
             vm.loginType = false;
@@ -91,10 +96,6 @@
                     if(result.code === 200){ 
                         var artilesbyKind = result.data;
                         vm.artilesbyKind[item.id] = artilesbyKind;
-                        // angular.forEach(artilesbyKind[item.id], function (item) {
-                        //     item.url = '/#/detail/' + item.artile_id;
-                        // });
-                        // console.log(vm.artilesbyKind[item.id]);
                     }
                 });
             });

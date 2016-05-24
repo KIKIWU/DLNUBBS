@@ -177,15 +177,19 @@
             
         }
         function cheacklogin() {
-            // var copy = angular.copy(vm.user);
-            // copy.requestTime = new Date().getTime();
-            // homeApiService.login(null, copy, function(result){
+            homeApiService.user(null, {}, function(result){
 
-            //     if(result.code === 200){
-            //         console.log("登录成功");
+                if(result.code === 200){
+                    var user = result.data.name;
+           
+                    vm.user = user;
+                    if(!vm.user) {
+                        vm.log = false;
+                        vm.user = '游客';
+                    }
                     
-            //     }
-            // });
+                }
+            });
         }
         function _initialization() {
         	vm.isCollapsed = {
