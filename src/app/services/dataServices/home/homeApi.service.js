@@ -49,14 +49,14 @@
             detail: {
                 url: 'http://www.dlnubbs.com/web/Artile/detail',
                 // url: 'url/web/Artile/detail',
-                method: 'GET',
+                method: 'POST',
             },
             reply: {
-                url: 'url/web/Artile/replyTo',
+                url: 'http://www.dlnubbs.com/web/Artile/replyTo',
                 method: 'GET'
             },
             getArticleByKind: {
-                url: 'url/web/Artile/detail',
+                url: 'http://www.dlnubbs.com/web/Artile/detail',
                 method: 'GET'
             }
         });
