@@ -58,6 +58,14 @@
             getArticleByKind: {
                 url: 'http://www.dlnubbs.com/web/Artile/detail',
                 method: 'POST'
+            },
+            like: {
+                url: 'http://www.dlnubbs.com/web/Artile/agree',
+                method: 'POST'
+            },
+            report: {
+                url: 'http://www.dlnubbs.com/web/Artile/report',
+                method: 'POST'
             }
         });
     }

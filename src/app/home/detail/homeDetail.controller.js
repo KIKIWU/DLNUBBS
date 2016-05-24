@@ -70,7 +70,7 @@
                 params.content = data.content;
                 homeApiService.reply(params, function(result){
 
-	                if(result.code === 200){
+	                if(result.code == 200){
 	                    var tips = {
                             title: '回复成功',
                             message: result.msg
@@ -85,8 +85,32 @@
         }
         function oprLike(index) {
         	vm['likeIcon' + index] = !vm['likeIcon' + index];
+            var params = {           
+            };
+            params.artile_id = vm.id;
+            homeApiService.like(params, function(result){
+
+                if(result.code == 200){
+                    console.log("点赞成功");
+                    // vm.getArticle(vm.id);                 
+                }
+            });
         }
-        function oprTipOff() {}
+        function oprTipOff() {
+            var params = {           
+            };
+            params.artile_id = vm.id;
+            homeApiService.like(params, function(result){
+
+                if(result.code == 200){
+                    var tips = {
+                        title: '已举报',
+                        message: result.msg
+                    };
+                    dialogService.alert(tips);                 
+                }
+            });
+        }
 
         function getArticle(id) {
         	console.log(id);
