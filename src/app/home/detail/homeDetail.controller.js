@@ -66,13 +66,18 @@
             dialogService.open(templateUrl, data, 'sm', true).result.then(function(data) {
                 var params = {};
                 params.artile_id = vm.id;
-                params.reply_to = record.id;
+                // params.reply_to = record.id;
                 params.content = data.content;
                 homeApiService.reply(params, function(result){
 
 	                if(result.code === 200){
-	                                        
-	                }
+	                    var tips = {
+                            title: '回复成功',
+                            message: result.msg
+                        };
+                        dialogService.alert(tips); 
+                        vm.getArticle(vm.id);                   
+    	            }
 	            });
 
             });
