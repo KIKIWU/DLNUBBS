@@ -41,7 +41,7 @@
 							        查看回复 <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
 							    </uib-accordion-heading>
 							    <ul class="rpy-list">
-							    	<li ng-repeat="item in assue.reply">
+							    	<li ng-repeat="item in assue.children">
 							    		<div><i class="i-normal">{{item.replyAuthor}}:
 							    		</i><span> 评论</span><i class="i-normal">{{item.author}}:</i> <span>{{item.content}}</span>
 								    	</div>

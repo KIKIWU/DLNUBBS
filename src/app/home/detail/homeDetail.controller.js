@@ -64,9 +64,10 @@
                 content: ''               
             };
             dialogService.open(templateUrl, data, 'sm', true).result.then(function(data) {
-                var params = {
-                    
-                };
+                var params = {};
+                params.artile_id = vm.id;
+                params.reply_to = record.id;
+                params.content = data.content;
                 homeApiService.reply(params, function(result){
 
 	                if(result.code === 200){
@@ -114,7 +115,7 @@
 			// 		name: 'test1',
 			// 		time: '2016年5月17日-19:20',
 			// 		content: '我不知道要评论什么',
-			// 		reply: [
+			// 		children: [
 			// 		{
 			// 			a: '王玥',
 			// 			b: 'kikiwu',
