@@ -100,7 +100,7 @@
             var params = {           
             };
             params.artile_id = vm.id;
-            homeApiService.like(params, function(result){
+            homeApiService.report(params, function(result){
 
                 if(result.code == 200){
                     var tips = {

@@ -43,7 +43,7 @@
             var params = {};
             homeApiService.getArticleKinds(null, params, function(result){
 
-                if(result.code === 200){ 
+                if(result.code == 200){ 
                     var kinds = result.data;
                     vm.Kinds = kinds;            
                 }
@@ -75,12 +75,12 @@
         	params.kind = id;
         	params.limit = 20;
         	params.page = page || 1;
-        	homeApiService.getHotArticles(params, function(result){
+        	homeApiService.getArticleByKind(null, params, function(result){
 
-                if(result.code === 200){
+                if(result.code == 200){
                     var articles = result.data;
                     vm.articles = articles; 
-                    var totalItems = result.data.TOTAL_COUNT;
+                    var totalItems = result.dataCount;
 
                     vm.pager = {
                         totalItems: totalItems

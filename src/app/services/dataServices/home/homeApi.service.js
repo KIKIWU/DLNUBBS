@@ -56,8 +56,8 @@
                 method: 'POST'
             },
             getArticleByKind: {
-                url: 'http://www.dlnubbs.com/web/Artile/detail',
-                method: 'POST'
+                url: 'http://www.dlnubbs.com/web/Artile/artileList',
+                method: 'GET'
             },
             like: {
                 url: 'http://www.dlnubbs.com/web/Artile/agree',
