@@ -52,7 +52,7 @@
                 method: 'GET',
             },
             reply: {
-                url: 'url/web/Artile/reply',
+                url: 'url/web/Artile/replyTo',
                 method: 'GET'
             },
             getArticleByKind: {

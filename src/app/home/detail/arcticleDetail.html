@@ -58,9 +58,9 @@
 							        </p>
 							    	<div uib-collapse="HomeDetail.isCollapsed['rpy' + assue.index]" data-rr={{HomeDetail.isCollapsed['rpy'+ assue.index]}}>
 										<div class="bg-success pdg-div">
-											<textarea></textarea>
+											<textarea ng-model="HomeDetail.commentContent"></textarea>
 											<p>
-												<button class="btn btn-primary btn-sm pull-right">发表</button>
+												<button class="btn btn-primary btn-sm pull-right" ng-click="HomeDetail.oprComment(HomeDetail.commentContent, assue.id)">发表</button>
 											</p>
 
 										</div>

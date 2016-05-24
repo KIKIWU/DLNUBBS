@@ -27,6 +27,7 @@
         vm.oprReply = oprReply;
         vm.oprLike = oprLike;
         vm.oprTipOff = oprTipOff;
+        vm.oprComment = oprComment;
         
         activate();
 
@@ -37,6 +38,24 @@
             vm.getArticle(vm.id);
         }
 
+        function oprComment(record, id) {
+
+            var params = {           
+            };
+            params.artile_id = vm.id;
+            params.reply_to = id;
+            params.content = record;
+            homeApiService.reply(params, function(result){
+
+                if(result.code == 200){
+                    var tips = {
+                        title: '回复成功',
+                        message: result.msg
+                    };
+                    dialogService.alert(tips);                  
+                }
+            });
+        }
         function oprReply(record) {
             var templateUrl = '/app/home/dialogTemplate/reply.html';
             var data = {
@@ -79,6 +98,7 @@
                         vm.isCollapsed['rpy' + i] = true;
                         vm['likeIcon' + i] = false;
                     };
+                    vm.likeIcon0 = false;
                     
                 }
             });
@@ -123,7 +143,7 @@
 			// ];
 			// vm.article.commentCount = 3;
 			
-            vm.likeIcon0 = false;
+            
         }
         function cheacklogin() {
             // var copy = angular.copy(vm.user);
@@ -139,7 +159,7 @@
         function _initialization() {
         	vm.isCollapsed = {
         	};
-        	
+        	vm.commentContent = '';
             var user = {
                 name: 'kikiwu' || '游客',
                 level: '11'
