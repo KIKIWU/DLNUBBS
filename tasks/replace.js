@@ -4,8 +4,8 @@ var revReplace = require("gulp-rev-replace");
 
 module.exports = function (gulp, plugins, dirs) {
     return function () {
-        return gulp.src(dirs.VIEW, {
-                base: dirs.VIEW
+        return gulp.src(dirs.JS, {
+                base: dirs.JS
             })
             .pipe(revReplace({
                 manifest: gulp.src(dirs.MANIFEST),

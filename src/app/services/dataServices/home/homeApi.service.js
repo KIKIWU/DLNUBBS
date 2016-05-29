@@ -9,8 +9,6 @@
     /* @ngInject */
     function homeApiService($resource){
 
-//        var preUrl = '/msc/mt/settle_config/travel/:action';
-       // var baseUrl = '/msc/mt/:tra/:path';
         return $resource('', {}, {
             /**
             * 登录  POST

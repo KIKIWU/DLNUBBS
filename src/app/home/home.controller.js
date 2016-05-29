@@ -35,7 +35,7 @@
         }
         function checkLogin() {
 
-             homeApiService.user(null, {}, function(result){
+            homeApiService.user(null, {}, function(result){
 
                 if(result.code === 200){
                     var user = result.data.name;
@@ -58,27 +58,21 @@
                 transition: false,
                 slides: [{
                     image: '/app/images/home/0002.jpg',
-                    // text: 'balabala',
                     id: 0
                 },{
                     image: '/app/images/home/0004.jpg',
-                    // text: 'balabala',
                     id: 1
                 },{
                     image: '/app/images/home/0005.jpg',
-                    // text: 'balabala',
                     id: 2
                 },{ 
                     image: '/app/images/home/0008.jpg',
-                    // text: 'balabala',
                     id: 3
                 },{
                     image: '/app/images/home/0006.jpg',
-                    // text: 'balabala',
                     id: 4
                 },{
                     image: '/app/images/home/bgd.jpg',
-                    // text: 'balabala',
                     id: 5
                 }]
             };

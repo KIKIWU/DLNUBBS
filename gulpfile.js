@@ -7,7 +7,6 @@ var plugins = require('gulp-load-plugins')({
 
 var tasks = require('require-dir')('./tasks');
 
-
 var dirs = {
     SRC: './',
     DEST: 'build',

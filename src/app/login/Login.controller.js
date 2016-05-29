@@ -33,6 +33,12 @@
                     console.log("登录成功");
                     vm.href = '/#/home';
                     
+                } else {
+                    var tips = {
+                        title: '登录失败',
+                        message: result.msg
+                    };
+                    dialogService.alert(tips);
                 }
             });
         }
