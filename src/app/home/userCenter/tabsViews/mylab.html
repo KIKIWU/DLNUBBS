@@ -1,1 +1,10 @@
-mylab.html
+<ul class="mylab-w">
+	<li ng-repeat="item in HomeUser.mylab">
+		<div>
+			<span>在</span> <a href="#/classify/{{item.kindId}}">{{item.kinName}}</a>
+			<span>发表</span><a href="#/detail/{{item.id}}">{{item.tittle}}</a>
+			<i class="pull-right i-small">{{item.time}}</i>
+    	</div>
+	
+	</li>
+</ul>

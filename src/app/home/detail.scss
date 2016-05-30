@@ -304,6 +304,24 @@ i {
 		// top: -10px;
 		border: 1px solid #DDDDDD;
 		border-top: none;
+		.mylab-w {
+			width: 100%;
+			border: none;
+			min-height: 390px;
+			padding: 40px 70px 40px 70px; 
+			li {
+				width: 100%;
+				border-bottom: 1px dotted #85C155;
+				padding: 8px 5px;
+			    font-size: 14px;
+			    line-height: 23px;
+			    zoom: 1;
+			    a {
+			    	font-size: 14px;
+			    	margin: 0 5px 0 5px;
+			    }
+			}
+		}
 	}
 }
 .nav-tab-common {

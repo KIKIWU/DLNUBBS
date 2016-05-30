@@ -21,11 +21,13 @@
         vm.footerView = '/app/layout/layoutViews/footer.html';
         vm.personalView = '/app/home/userCenter/tabsViews/personal.html';
         vm.mylabView = '/app/home/userCenter/tabsViews/mylab.html';
+        vm.aboutmeView = '/app/home/userCenter/tabsViews/aboutme.html';
         vm.user = $stateParams.id;
         console.log(vm.kindId);
 
         vm.cheacklogin = cheacklogin;
         vm.query = query;
+        vm.queryMylab = queryMylab;
         
         //获取文章数据
         
@@ -61,7 +63,41 @@
                 address: '北京市回龙观',
             };
  		}
-		
+		function queryMylab() {
+			var params = {};
+ 			params.id = vm.id;
+			homeApiService.querylab(params, function(result){
+
+                if(result.code == 200){
+                    var mylab = result.data;
+                    vm.mylab = mylab;              
+                }
+            });
+            vm.mylab = [
+                {
+                	kinName: '校园生活',
+                	tittle: '大四的你和我',
+                	id: 22,
+                	kindId: 22,
+                	time: '2012.4.3'
+                },
+                {
+                	kinName: '校园生活',
+                	tittle: '留书给最爱的你，我们毕业了',
+                	time: '2012.4.3'
+                },
+                {
+                	kinName: '考研专区',
+                	tittle: '金石滩校区金石明珠求研友',
+                	time: '2012.4.3'
+                },
+                {
+                	kinName: '校园生活',
+                	tittle: '大四的你和我'
+                }
+
+            ];
+		}
         function getArticleByKind(id, page) {
         	var params = {};
         	params.kind = id;
