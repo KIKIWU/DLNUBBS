@@ -296,6 +296,87 @@ i {
 	}
 	
 }
+.userCenter-wrap {
+	width: 960px;
+	padding-top: 40px;
+	.tab-content {
+		position: relative;
+		// top: -10px;
+		border: 1px solid #DDDDDD;
+		border-top: none;
+	}
+}
+.nav-tab-common {
+        ul {
+            border-bottom: 1px solid #ccc;
+            li {
+                width: 200px;
+                a {
+                    border-bottom-color: #fff;
+                }
+            }
+            &.active > a,
+            &.active > a:hover {
+                color: #4e7cc4;
+            }
+        }
+    }
+.block-show {
+            border-bottom: 1px dotted #ccc;
+            padding-top: 40px;
+            min-height: 390px;
+            .info-show {
+                margin-left: 20px;
+                color: #666;
+               
+                label {
+                    line-height: 30px;
+                    font-weight: normal;
+                    text-align: right;
+                }
 
+                .important-label {
+                    font-weight: 800;
+                    font-weight: bold;
+                    color: #333;
+                    vertical-align: bottom;
+                }
+                &.info-table {
+
+                    tr td {
+                        border-top: 0;
+                        text-align: left;
+                        // width: 300px;
+                        label i {
+                            margin-right: 10px;
+                        }
+
+                    }
+                }
+                p {
+                    label {
+                        margin-right: 10px;
+                        input {
+                            margin-right: 5px;
+                        }
+                    }
+                    .select-common {
+                        width: 80px;
+                        display: inline-block;
+                    }
+                    .common-btn {
+                        background-color: #428bca;
+                        color: #fff;
+                        border-radius: 3px;
+                    }
+                    .input-common {
+                        width: 130px;
+                        display: inline-block;
+                    }
+                }
+            }
+            
+        }
+        
 
 

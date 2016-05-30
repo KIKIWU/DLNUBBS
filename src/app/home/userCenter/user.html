@@ -1,1 +1,18 @@
-user.html
+<div ng-include src="HomeUser.headerView" class="headerView detailHeader"></div>
+<div class="userCenter-wrap center-block">
+	<div class="userCenter-layout">
+		<uib-tabset justified="true" class="nav-tab-common">
+            <uib-tab heading="个人资料" ng-click="HomeUser.query()">
+                <div ng-include src="HomeUser.personalView" class="filterview" class="tab-content"></div>
+            </uib-tab>
+            <uib-tab heading="我的帖子" ng-click="HomeUser.queryMylab()">
+                <div ng-include src="HomeUser.mylabView" class="filterview" class="tab-content"></div>
+            </uib-tab>
+            <uib-tab heading="与我相关" ng-click="HomeUser.invoiceSet()">
+                <div ng-include src="HomeUser.invoice" class="filterview" class="tab-content"></div>
+            </uib-tab>
+        </uib-tabset>
+	</div>
+</div>
+<div ng-include src="HomeUser.footerView" class="detailFooterView center-block"></div>
+

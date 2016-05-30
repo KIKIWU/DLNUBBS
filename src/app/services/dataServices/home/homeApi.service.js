@@ -67,6 +67,16 @@
             report: {
                 url: 'http://www.dlnubbs.com/web/Artile/report',
                 method: 'POST'
+            },
+            //发表
+            publish: {
+                url: 'http://www.dlnubbs.com/web/Artile/report',
+                method: 'POST'
+            },
+            //个人中心获取信息
+            userMessage: {
+                url: 'url/web/Artile/report',
+                method: 'POST'
             }
         });
     }
