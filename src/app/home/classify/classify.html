@@ -33,22 +33,38 @@
 							<div class="user-author">
 								<i class="fa fa-user" aria-hidden="true"></i>
 								<span>{{article.author}}</span>
-							</div>
-						
+							</div>						
 						</div>
 						<div class="content-info">
 							<p>{{article.content}}</p>
 							<i class="i-small">{{article.create_time}}</i>
 						</div>
-				    </div>
-				
+				    </div>			
 				</li>
 			</ul>
 			<div class="pagination-w">
-				<uib-pagination ng-show="HomeClassify.pager.totalItems > 20" total-items="HomeClassify.pager.totalItems" ng-model="HomeClassify.page" items-per-page="20" ng-change="HomeClassify.getArticleByKind(HomeClassify.kindId,HomeClassify.page)" previous-text="上一页" next-text="下一页" first-text="首页" last-text="尾页" max-size="5" boundary-links="true" rotate="false"></uib-pagination>
+				<uib-pagination ng-show="HomeClassify.pager.totalItems > 20" total-items="HomeClassify.pager.totalItems" ng-model="HomeClassify.page" items-per-page="20" ng-change="HomeClassify.getArticleByKind(HomeClassify.kindId,HomeClassify.page)" previous-text="上一页" next-text="下一页" first-text="首页" last-text="尾页" max-size="5" boundary-links="true" rotate="false">
+				</uib-pagination>
+			</div>
+			<div class="publish-wrap">
+				<h5 class="col-sm-5">发布新帖</h5>
+				<div class="clearfix publish-c">
+					<div class="col-sm-7">
+
+						<input type="text" class="form-control" ng-model="HomeClassify.newArticle.title" placeholder="请填写标题">
+					</div>
+					<div class="col-sm-9 publish-text">
+						<textarea ng-model="HomeClassify.newArticle.content"></textarea>
+					</div>
+						
+					<div class="col-sm-7">
+						<button class="btn btn-primary btn-sm" ng-click="HomeClassify.publish()">发表</button>
+					</div>
+				</div>
 			</div>
 		</div>	
 	</div>
+	
 	<div ng-include src="HomeClassify.footerView" class="detailFooterView center-block"></div>
 </div>
 
