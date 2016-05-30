@@ -218,6 +218,7 @@
         	vm.isCollapsed = {
         	};
         	vm.newArticle= {};
+        	// vm.user = '游客';
         }
     }
 })();

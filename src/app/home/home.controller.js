@@ -37,10 +37,11 @@
 
             homeApiService.user(null, {}, function(result){
 
-                if(result.code === 200){
+                if(result.code == 200){
                     var user = result.data.name;
            
                     vm.user = user;
+                    vm.loginType = true;
                     if(!vm.user) {
                         vm.log = false;
                         vm.user = '游客';
@@ -87,7 +88,7 @@
                 params.kind = item.id;
                 homeApiService.getHotArticles(null, params, function(result){
 
-                    if(result.code === 200){ 
+                    if(result.code == 200){ 
                         var artilesbyKind = result.data;
                         vm.artilesbyKind[item.id] = artilesbyKind;
                     }
@@ -100,7 +101,7 @@
             params.limit = 7;
             homeApiService.getHotArticles(null, params, function(result){
 
-                if(result.code === 200){ 
+                if(result.code == 200){ 
                     var hot = result.data;
                     vm.hot = hot;
                     angular.forEach(hot, function (item) {
@@ -139,7 +140,7 @@
             var params = {};
             homeApiService.getArticleKinds(null, params, function(result){
 
-                if(result.code === 200){ 
+                if(result.code == 200){ 
                     var kinds = result.data;
                     vm.articleKinds = angular.copy(kinds);
                     vm.kinds = {};

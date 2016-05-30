@@ -33,7 +33,12 @@
                 controller: 'HomeClassifyController',
                 controllerAs: 'HomeClassify'
             })
-            
+            .state('user', {
+                url: '/user/:id',
+                templateUrl: '/app/home/userCenter/user.html',
+                controller: 'HomeUserController',
+                controllerAs: 'HomeUser'
+            })
             .state('login', {
                 url: '/login',
                 templateUrl: '/app/login/login.html',
