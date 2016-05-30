@@ -78,6 +78,10 @@
                 url: 'url/web/Artile/report',
                 method: 'POST'
             },
+            saveInfo: {
+                url: 'url/web/Artile/report',
+                method: 'POST'
+            },
             //我发布的帖子
             querylab: {
                 url: 'url/web/Artile/report',

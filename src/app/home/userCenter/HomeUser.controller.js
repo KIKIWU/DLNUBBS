@@ -29,8 +29,7 @@
         vm.query = query;
         vm.queryMylab = queryMylab;
         vm.aboutme = aboutme;
-        
-        //获取文章数据
+        vm.saveInfo = saveInfo;
         
         
         activate();
@@ -42,7 +41,21 @@
             vm.cheacklogin();
             vm.query();
         }
+        function saveInfo() {
+        	var params = vm.message;
+        	homeApiService.saveInfo(null, params, function(result){
 
+                if(result.code == 200){
+                            
+                    var tips = {
+                        title: '修改成功',
+                        message: result.msg
+                    };
+                    dialogService.alert(tips); 
+                    vm.query();  
+                }
+            });
+        }
         function aboutme() {
         	homeApiService.userMessage(null, {}, function(result){
 

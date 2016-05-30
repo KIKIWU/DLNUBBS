@@ -304,7 +304,7 @@ i {
 		// top: -10px;
 		border: 1px solid #DDDDDD;
 		border-top: none;
-		.mylab-w {
+		.mylab-w, .aboutme-w {
 			width: 100%;
 			border: none;
 			min-height: 390px;
@@ -321,6 +321,18 @@ i {
 			    	margin: 0 5px 0 5px;
 			    }
 			}
+		}
+		.aboutme-w {
+			padding: 40px 50px 40px 50px; 
+
+			p {
+				// font-size: 
+				span {
+					color: #989898;
+					margin: 0 5px 0 5px;
+				}
+			}
+
 		}
 	}
 }
