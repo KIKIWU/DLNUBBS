@@ -28,6 +28,7 @@
         vm.cheacklogin = cheacklogin;
         vm.query = query;
         vm.queryMylab = queryMylab;
+        vm.aboutme = aboutme;
         
         //获取文章数据
         
@@ -40,6 +41,53 @@
             _initialization();
             vm.cheacklogin();
             vm.query();
+        }
+
+        function aboutme() {
+        	homeApiService.userMessage(null, {}, function(result){
+
+                if(result.code == 200){
+                    var rpyme = result.data;
+                    vm.rpyme = rpyme;              
+                }
+            });
+            vm.rpyme = [
+            {
+            	name: "匪我思存",
+            	content: 'balabalabalaa',
+            	tittle: '面朝大海春暖花开，再见',
+            	kinName: '校园生活',
+            	time: '2016.3.3 17:56'
+            },
+            {
+            	name: "匪我思存",
+            	content: 'balabalabalaa',
+            	tittle: '面朝大海春暖花开，再见',
+            	kinName: '校园生活',
+            	time: '2016.3.3 17:56'
+            },
+            {
+            	name: "匪我思存",
+            	content: 'balabalabalaa',
+            	tittle: '面朝大海春暖花开，再见',
+            	kinName: '校园生活',
+            	time: '2016.3.3 17:56'
+            },
+            {
+            	name: "匪我思存",
+            	content: 'balabalabalaa',
+            	tittle: '面朝大海春暖花开，再见',
+            	kinName: '校园生活',
+            	time: '2016.3.3 17:56'
+            },
+            {
+            	name: "匪我思存",
+            	content: 'balabalabalaa',
+            	tittle: '面朝大海春暖花开，再见',
+            	kinName: '校园生活',
+            	time: '2016.3.3 17:56'
+            }
+            ];
         }
  		function query() {
  			var params = {};
