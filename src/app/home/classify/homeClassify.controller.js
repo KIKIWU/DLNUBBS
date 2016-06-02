@@ -220,7 +220,7 @@
         	vm.isCollapsed = {
         	};
         	vm.newArticle= {};
-        	vm.newArticle.is_comment = true;
+        	vm.newArticle.is_comment = "true";
         	vm.log = false;
         }
     }

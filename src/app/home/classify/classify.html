@@ -56,12 +56,19 @@
 					<div class="col-sm-9 publish-text">
 						<textarea ng-model="HomeClassify.newArticle.content"></textarea>
 					</div>
-					<div class="col-sm-9 publish-text">
+					<div class="col-sm-9">
 						<label class="col-md-3 important-label">是否允许评论:</label>
 		                <label>
-		                    <input name="is_comment" type="radio" ng-model="HomeClassify.newArticle.is_comment == true" value="true">是</input>
-		                    <input name="is_comment" type="radio" ng-model="HomeClassify.newArticle.is_comment == false"
+		                    <input name="is_comment" type="radio" ng-model="HomeClassify.newArticle.is_comment" value="true">是</input>
+		                    <input name="is_comment" type="radio" ng-model="HomeClassify.newArticle.is_comment"
 		                     value="false">否</input>
+		                </label>
+					</div>
+					<div class="col-sm-9">
+						<label class="col-md-3 important-label">关键字:</label>
+		                <label>
+		                    <input name="keyword" type="text" ng-model="HomeClassify.newArticle.keyword"></input>
+		                    <i>(多个关键字之间用“/”分隔)</i>
 		                </label>
 					</div>
 					<div class="col-sm-7">

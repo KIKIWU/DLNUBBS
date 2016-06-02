@@ -53,6 +53,7 @@
                     };
                     dialogService.alert(tips); 
                     vm.query();  
+                    vm.cheacklogin();
                 }
             });
         }
