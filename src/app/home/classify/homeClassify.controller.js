@@ -43,10 +43,11 @@
 
 		function publish() {
 			var params = {};
-			params.title = vm.newArticle.title;
+			params.tittle = vm.newArticle.title;
 			params.content = vm.newArticle.content;
 			params.kind = vm.kindId;
 			params.is_comment = vm.newArticle.is_comment;
+			params.keyword = vm.newArticle.keyword;
 			homeApiService.publish(null, params, function(result){
 
                 if(result.code == 200){
