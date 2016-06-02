@@ -43,7 +43,7 @@
         }
         function saveInfo() {
         	var params = vm.message;
-        	homeApiService.saveInfo(null, params, function(result){
+        	homeApiService.changeMessage(null, params, function(result){
 
                 if(result.code == 200){
                             
@@ -57,7 +57,7 @@
             });
         }
         function aboutme() {
-        	homeApiService.userMessage(null, {}, function(result){
+        	homeApiService.queryMyReply(null, {}, function(result){
 
                 if(result.code == 200){
                     var rpyme = result.data;
@@ -134,30 +134,30 @@
                     vm.mylab = mylab;              
                 }
             });
-            vm.mylab = [
-                {
-                	kinName: '校园生活',
-                	tittle: '大四的你和我',
-                	id: 22,
-                	kindId: 22,
-                	time: '2012.4.3'
-                },
-                {
-                	kinName: '校园生活',
-                	tittle: '留书给最爱的你，我们毕业了',
-                	time: '2012.4.3'
-                },
-                {
-                	kinName: '考研专区',
-                	tittle: '金石滩校区金石明珠求研友',
-                	time: '2012.4.3'
-                },
-                {
-                	kinName: '校园生活',
-                	tittle: '大四的你和我'
-                }
+            // vm.mylab = [
+            //     {
+            //     	kinName: '校园生活',
+            //     	tittle: '大四的你和我',
+            //     	id: 22,
+            //     	kindId: 22,
+            //     	time: '2012.4.3'
+            //     },
+            //     {
+            //     	kinName: '校园生活',
+            //     	tittle: '留书给最爱的你，我们毕业了',
+            //     	time: '2012.4.3'
+            //     },
+            //     {
+            //     	kinName: '考研专区',
+            //     	tittle: '金石滩校区金石明珠求研友',
+            //     	time: '2012.4.3'
+            //     },
+            //     {
+            //     	kinName: '校园生活',
+            //     	tittle: '大四的你和我'
+            //     }
 
-            ];
+            // ];
 		}
         function getArticleByKind(id, page) {
         	var params = {};
@@ -198,6 +198,7 @@
         	vm.isCollapsed = {
         	};
         	vm.newArticle= {};
+            vm.newArticle.is_comment = true;
         	// vm.user = '游客';
         }
     }

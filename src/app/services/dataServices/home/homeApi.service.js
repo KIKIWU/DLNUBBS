@@ -70,7 +70,7 @@
             },
             //发表
             publish: {
-                url: 'http://www.dlnubbs.com/web/Artile/report',
+                url: 'http://www.dlnubbs.com/web/Artile/publish',
                 method: 'POST'
             },
             
@@ -78,13 +78,13 @@
                 url: 'http://www.dlnubbs.com/web/auth/changeUserInfo',
                 method: 'POST'
             },
-            saveInfo: {
-                url: 'url/web/Artile/report',
-                method: 'POST'
-            },
             //我发布的帖子
             querylab: {
-                url: 'url/web/Artile/report',
+                url: 'http://www.dlnubbs.com/web/Artile/getMyArtile',
+                method: 'POST'
+            },
+            queryMyReply: {
+                url: 'http://www.dlnubbs.com/web/Artile/getMyReply',
                 method: 'POST'
             }
         });

@@ -45,8 +45,9 @@
 			var params = {};
 			params.title = vm.newArticle.title;
 			params.content = vm.newArticle.content;
-			params.id = vm.kindId;
-			homeApiService.user(null, params, function(result){
+			params.kind = vm.kindId;
+			params.is_comment = vm.newArticle.is_comment;
+			homeApiService.publish(null, params, function(result){
 
                 if(result.code == 200){
                     var tips = {
@@ -219,6 +220,7 @@
         	vm.isCollapsed = {
         	};
         	vm.newArticle= {};
+        	vm.newArticle.is_comment = true;
         	vm.log = false;
         }
     }
