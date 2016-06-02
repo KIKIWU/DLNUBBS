@@ -131,7 +131,7 @@
                         vm['likeIcon' + i] = false;
                     };
                     vm.likeIcon0 = false;
-                    
+                    console.log(vm.article.commentes.children);
                 }
             });
    //          vm.article = {};
