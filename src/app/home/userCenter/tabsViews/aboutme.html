@@ -2,7 +2,7 @@
 	<li ng-repeat="item in HomeUser.rpyme">
 		<div>
 			<p>
-			我 : {{item.content}}<i class="pull-right i-small">{{item.create_time}}</i></p>
+			我 : {{item.content}}<i class="pull-right i-small">{{item["create_time"]}}</i></p>
 			<p>
 				<span>回复主题:“</span>{{item.tittle}}<span>” > </span>{{item.kindName}}
 			</p>
