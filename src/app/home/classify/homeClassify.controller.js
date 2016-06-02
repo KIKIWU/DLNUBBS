@@ -55,7 +55,8 @@
                         title: '发布成功',
                         message: result.msg
                     };
-                    dialogService.alert(tips);  
+                    dialogService.alert(tips); 
+                    vm.newArticle = {}; 
                 }
             });
 		}

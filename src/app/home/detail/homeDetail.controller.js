@@ -53,7 +53,8 @@
                         message: result.msg
                     };
                     dialogService.alert(tips); 
-                    vm.getArticle(vm.id);                 
+                    vm.getArticle(vm.id); 
+                    vm.commentContent = '';                
                 }
             });
         }
