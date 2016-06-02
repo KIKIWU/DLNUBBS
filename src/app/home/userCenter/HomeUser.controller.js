@@ -64,48 +64,48 @@
                     vm.rpyme = rpyme;              
                 }
             });
-            vm.rpyme = [
-            {
-            	name: "匪我思存",
-            	content: 'balabalabalaa',
-            	tittle: '面朝大海春暖花开，再见',
-            	kinName: '校园生活',
-            	time: '2016.3.3 17:56'
-            },
-            {
-            	name: "匪我思存",
-            	content: 'balabalabalaa',
-            	tittle: '面朝大海春暖花开，再见',
-            	kinName: '校园生活',
-            	time: '2016.3.3 17:56'
-            },
-            {
-            	name: "匪我思存",
-            	content: 'balabalabalaa',
-            	tittle: '面朝大海春暖花开，再见',
-            	kinName: '校园生活',
-            	time: '2016.3.3 17:56'
-            },
-            {
-            	name: "匪我思存",
-            	content: 'balabalabalaa',
-            	tittle: '面朝大海春暖花开，再见',
-            	kinName: '校园生活',
-            	time: '2016.3.3 17:56'
-            },
-            {
-            	name: "匪我思存",
-            	content: 'balabalabalaa',
-            	tittle: '面朝大海春暖花开，再见',
-            	kinName: '校园生活',
-            	time: '2016.3.3 17:56'
-            }
-            ];
+            // vm.rpyme = [
+            // {
+            // 	name: "匪我思存",
+            // 	content: 'balabalabalaa',
+            // 	tittle: '面朝大海春暖花开，再见',
+            // 	kinName: '校园生活',
+            // 	time: '2016.3.3 17:56'
+            // },
+            // {
+            // 	name: "匪我思存",
+            // 	content: 'balabalabalaa',
+            // 	tittle: '面朝大海春暖花开，再见',
+            // 	kinName: '校园生活',
+            // 	time: '2016.3.3 17:56'
+            // },
+            // {
+            // 	name: "匪我思存",
+            // 	content: 'balabalabalaa',
+            // 	tittle: '面朝大海春暖花开，再见',
+            // 	kinName: '校园生活',
+            // 	time: '2016.3.3 17:56'
+            // },
+            // {
+            // 	name: "匪我思存",
+            // 	content: 'balabalabalaa',
+            // 	tittle: '面朝大海春暖花开，再见',
+            // 	kinName: '校园生活',
+            // 	time: '2016.3.3 17:56'
+            // },
+            // {
+            // 	name: "匪我思存",
+            // 	content: 'balabalabalaa',
+            // 	tittle: '面朝大海春暖花开，再见',
+            // 	kinName: '校园生活',
+            // 	time: '2016.3.3 17:56'
+            // }
+            // ];
         }
  		function query() {
  			var params = {};
  			params.id = vm.id;
-			homeApiService.userMessage(params, function(result){
+			homeApiService.user(params, function(result){
 
                 if(result.code == 200){
                     var message = result.data;
@@ -113,16 +113,16 @@
                 }
             });
             //假数据
-            vm.message = {
-            	name: 'gary',
-            	mail: 'gary111@gmail.com',
-                phone: '10086777',       
-                sex: '男',
-                school: '大连民族大学',
-                company: 'running man',
-                work: '前端开发工程师',
-                address: '北京市回龙观',
-            };
+            // vm.message = {
+            // 	name: 'gary',
+            // 	mail: 'gary111@gmail.com',
+            //     phone: '10086777',       
+            //     sex: '男',
+            //     school: '大连民族大学',
+            //     company: 'running man',
+            //     work: '前端开发工程师',
+            //     address: '北京市回龙观',
+            // };
  		}
 		function queryMylab() {
 			var params = {};
@@ -183,12 +183,12 @@
             homeApiService.user(null, {}, function(result){
 
                 if(result.code === 200){
-                    var user = result.data.name;
+                    var user = result.data;
            
 		            vm.user = user;
-		            if(!vm.user) {
+		            if(!vm.user.name) {
 		            	vm.log = false;
-		            	vm.user = '游客';
+		            	vm.user.name = '游客';
 		            }
                     
                 }

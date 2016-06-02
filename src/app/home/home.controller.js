@@ -38,13 +38,12 @@
             homeApiService.user(null, {}, function(result){
 
                 if(result.code == 200){
-                    var user = result.data.name;
+                    var user = result.data;
            
                     vm.user = user;
-                    vm.loginType = true;
-                    if(!vm.user) {
+                    if(!vm.user.name) {
                         vm.log = false;
-                        vm.user = '游客';
+                        vm.user.name = '游客';
                     }
                     
                 }
@@ -109,32 +108,38 @@
                     });
                 }
             });
-            vm.employment = [{
-                tittle: '美团网酒店旅游事业群诚招高级前端开发工程师',
-                author: '吴琪',
-                headimg: '/app/images/home/metuan.png',
-                url: 0
-            },{
-                title: '滴滴打车社招内推php',
-                author: '张德满',
-                headimg: '/app/images/home/didi.png',
-                url: 2
-            },{
-                title: '美团网外卖事业群诚招前端',
-                author: '那丽雪',
-                headimg: '/app/images/home/metuan.png',
-                url: 1
-            },{
-                title: '百度2017年校园招聘内推报名',
-                author: 'nacliu',
-                headimg: '/app/images/home/baidu.jpg',
-                url: 2
-            },{
-                title: '人人车招聘市场运营',
-                author: '人人车hr',
-                headimg: '/app/images/home/renrenche.png',
-                url: 2
-            }];
+            vm.employment = [
+                {
+                    tittle: '美团网酒店旅游事业群诚招高级前端开发工程师',
+                    author: '吴琪',
+                    headimg: '/app/images/home/metuan.png',
+                    url: 0
+                },
+                {
+                    title: '滴滴打车社招内推php',
+                    author: '张德满',
+                    headimg: '/app/images/home/didi.png',
+                    url: 2
+                },
+                {
+                    title: '美团网外卖事业群诚招前端',
+                    author: '那丽雪',
+                    headimg: '/app/images/home/metuan.png',
+                    url: 1
+                },
+                {
+                    title: '百度2017年校园招聘内推报名',
+                    author: 'nacliu',
+                    headimg: '/app/images/home/baidu.jpg',
+                    url: 2
+                },
+                {
+                    title: '人人车招聘市场运营',
+                    author: '人人车hr',
+                    headimg: '/app/images/home/renrenche.png',
+                    url: 2
+                }
+                ];
         }
         function getArticleKinds() {
             var params = {};

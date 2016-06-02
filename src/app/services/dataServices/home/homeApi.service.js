@@ -73,9 +73,9 @@
                 url: 'http://www.dlnubbs.com/web/Artile/report',
                 method: 'POST'
             },
-            //个人中心获取信息
-            userMessage: {
-                url: 'url/web/Artile/report',
+            
+            changeMessage: {
+                url: 'http://www.dlnubbs.com/web/auth/changeUserInfo',
                 method: 'POST'
             },
             saveInfo: {

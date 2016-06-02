@@ -180,12 +180,12 @@
             homeApiService.user(null, {}, function(result){
 
                 if(result.code === 200){
-                    var user = result.data.name;
+                    var user = result.data;
            
                     vm.user = user;
-                    if(!vm.user) {
+                    if(!vm.user.name) {
                         vm.log = false;
-                        vm.user = '游客';
+                        vm.user.name = '游客';
                     }
                     
                 }
