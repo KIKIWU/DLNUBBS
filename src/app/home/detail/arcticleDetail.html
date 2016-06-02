@@ -43,7 +43,7 @@
 							    <ul class="rpy-list">
 							    	<li ng-repeat="item in assue.children">
 							    		<div><i class="i-normal">{{item.replyAuthor}}:
-							    		</i><span> 评论</span><i class="i-normal">{{item.author}}:</i> <span>{{item.content}}</span>
+							    		</i><span> 评论</span><i class="i-normal">{{assue.name}}:</i> <span>{{item.content}}</span>
 								    	</div>
 								    	<div class="clearfix">    		
 								    		<span class="pull-right" ng-click="HomeDetail.isCollapsed['rpy' + assue.index] = false">回复</span>
