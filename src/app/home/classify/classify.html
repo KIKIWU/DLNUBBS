@@ -59,8 +59,9 @@
 					<div class="col-sm-9 publish-text">
 						<label class="col-md-3 important-label">是否允许评论:</label>
 		                <label>
-		                    <input name="is_comment" class="form-control" type="text" ng-model="HomeClassify.newArticle.is_comment == true">是</input>
-		                    <input name="is_comment" class="form-control" type="text" ng-model="HomeClassify.newArticle.is_comment == false">否</input>
+		                    <input name="is_comment" type="radio" ng-model="HomeClassify.newArticle.is_comment == true" value="true">是</input>
+		                    <input name="is_comment" type="radio" ng-model="HomeClassify.newArticle.is_comment == false"
+		                     value="false">否</input>
 		                </label>
 					</div>
 					<div class="col-sm-7">
