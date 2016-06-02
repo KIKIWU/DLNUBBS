@@ -101,7 +101,7 @@
                 if(result.code == 200){
                     var articles = result.data;
                     vm.articles = articles; 
-                    var totalItems = result.dataCount;
+                    var totalItems = result.data.dataCount;
 
                     vm.pager = {
                         totalItems: totalItems
