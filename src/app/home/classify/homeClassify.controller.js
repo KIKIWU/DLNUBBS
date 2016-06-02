@@ -43,7 +43,7 @@
 
 		function publish() {
 			var params = {};
-			params.tittle = vm.newArticle.title;
+			params.tittle = vm.newArticle.tittle;
 			params.content = vm.newArticle.content;
 			params.kind = vm.kindId;
 			params.is_comment = vm.newArticle.is_comment;
